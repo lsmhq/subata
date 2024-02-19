@@ -82,17 +82,110 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 [点击前往](https://www.bilibili.com/video/BV1xX4y1m7gB/?spm_id_from=333.337.search-card.all.click)
 特別要注意的是，细微调整需要调整成绝对座標(要出现x、y、z轴)
 ## ==如何快速升级==
-3等前: 因为成长法术只能对单个植物生效，所以植物不要种太多(除非你能量很多)。种三颗集市可买的""来渡过前期。
+3等前: \
+因为成长法术只能对单个植物生效，所以植物不要种太多(除非你能量很多)。种三颗集市可买的"黄色灯笼椒"来渡过前期。\
 
 3等到5等前:
-去沙鱷找土拨鼠学到的新成长法术作用范围没有到最大，但是也能有效地节省能量(相比1等地成长法术)。可以开始种舞王。
-5等后:
-去木须找土拨鼠学到的新成长法术作用范围是最大的。可以开始种马铃薯、碗豆。
+去沙鱷找土拨鼠学到的新成长法术作用范围没有到最大，但是也能有效地节省能量(相比1等地成长法术)。可以开始种舞王。\
 
-10等:
-去阿瓦隆-Caliburn找Sumner Fieldgold接There’s the Shrub的支线任务，可以解锁阿瓦隆的土拨鼠。(前提主线进度需要解完Queen of Light took her Bow)
-15等:
-去虫国-Bastion找Zaltanna the Mirrormask接Bring The Green的支线任务，可以解锁虫国的土拨鼠。(前提主线进度需要解完Uneasy Allies)
+5等后:\
+去木须找土拨鼠学到的新成长法术作用范围是最大的。可以开始种马铃薯、碗豆。\
+
+10等:\
+去阿瓦隆-Caliburn找Sumner Fieldgold接There’s the Shrub的支线任务，可以解锁阿瓦隆的土拨鼠。(前提主线进度需要解完Queen of Light took her Bow)\
+
+15等:\
+去虫国-Bastion找Zaltanna the Mirrormask接Bring The Green的支线任务，可以解锁虫国的土拨鼠。(前提主线进度需要解完Uneasy Allies)\
+
+## ==48小时保护魔法==
+以防虫法术为例，两种法术的耗能不一样。 一般法术的优点是单次耗能少，但是过一阵子就还是会產生害虫。 长效保护法术虽然单次耗能多，但是可以持续一阵子，並且施放当下也可以驱虫。
+
+以一天顾一次，共计三天: 一般法术需要花15点能量，但是长效保护法术只需花10点能量。 以总能量的消耗来看，长效保护法术能有效地节省能量。
+
+![](https://media.discordapp.net/attachments/1068549367310594048/1068803125646987264/2023-01-28_154755.png?width=352&height=251)
+
+## ==如何获得园艺技能？==
+和常规战斗魔法不同，园艺技能并不需要训练点，而是需要大量金币并从鼹鼠Farley那里购买获得。目前共有45种不同的园艺技能，分布在不同世界的不同Farley身上。
+
+ **建议只选择自己需要的进行学习，因为学完所有技能的金币花费为2692100.** 
+## ==任务技能：==
+完成12级接取的初始园艺任务即可免费获得。
+![](https://subata.top/wp-content/uploads/2023/07/3BSPCK9MS2ESYR88TJZW7.png)
+![](https://subata.top/wp-content/uploads/2023/07/A7DGVBNB4IMH23IU.png)
+![](https://subata.top/wp-content/uploads/2023/07/GHHBJKCVBZ3LUCSD.png)
+![](https://subata.top/wp-content/uploads/2023/07/YAIDE@4N9UKG8X5U5YND.png)
+## ==魔法城的鼹鼠老师==
+可以在傀儡庭院找到它
+![](https://subata.top/wp-content/uploads/2023/07/G4Q8KSJT730H37X.png)
+![](https://subata.top/wp-content/uploads/2023/07/3ZQQY5R3J4H4UOK8PSS.png)
+![](https://subata.top/wp-content/uploads/2023/07/TL8X2_949OUQLF47.png)
+![](https://subata.top/wp-content/uploads/2023/07/HEYFZ3G8ZAX06CLP4.png)
+![](https://subata.top/wp-content/uploads/2023/07/92R7JOAM0J3VQTIGY4.png)
+![](https://subata.top/wp-content/uploads/2023/07/T2@OFHJQA7MUZ_A0YYEL.png)
+![](https://subata.top/wp-content/uploads/2023/07/VVDTMVYQ0IN3TFMT4Q200.png)
+
+## ==克罗克的鼹鼠老师==
+绿洲靠近金字塔的位置可以找到它，可以学到中范围魔法以及大片土壤开垦魔法
+![](https://subata.top/wp-content/uploads/2023/07/XF4XA2TA3PNYSAPJTIM4LC5.png)
+![](https://subata.top/wp-content/uploads/2023/07/2E3TDXS23W@OGOXCX.png)
+![](https://subata.top/wp-content/uploads/2023/07/NIYOI@THPA50EAJFL.png)
+![](https://subata.top/wp-content/uploads/2023/07/372BQCMN772K7UPXLF.png)
+![](https://subata.top/wp-content/uploads/2023/07/UCIZNE_P3DKGYYLGX4R.png)
+![](https://subata.top/wp-content/uploads/2023/07/J@C7S_12O_K0ESL8.png)
+![](https://subata.top/wp-content/uploads/2023/07/OFN6HLVFRIRZIJ3CY6Y.png)
+![](https://subata.top/wp-content/uploads/2023/07/L2IG4UUKJR52@1WIJGUF.png)
+
+## ==木须的鼹鼠老师==
+走出旋涡门所在的房间，可以在翡翠殿找到它。可以学到大范围魔法
+![](https://subata.top/wp-content/uploads/2023/07/LITTBQ7_2TV6QIK0AHY4.png)
+![](https://subata.top/wp-content/uploads/2023/07/@3EHLI3SHOW7MD6ZY6M.png)
+![](https://subata.top/wp-content/uploads/2023/07/7D9KY34CTTL0MMBKQPXA7.png)
+![](https://subata.top/wp-content/uploads/2023/07/T21PTGAKWQVP@OWOEMX.png)
+![](https://subata.top/wp-content/uploads/2023/07/6DZ3RZH@IU5RZCAR4_L.png)
+![](https://subata.top/wp-content/uploads/2023/07/M7L18C6KBEWGL957YEYCG.png)
+![](https://subata.top/wp-content/uploads/2023/07/KZBNHMIM@E9H31W03.png)
+![](https://subata.top/wp-content/uploads/2023/07/LIZ25LVM1T6TM41AYBNC.png)
+
+## ==天国的鼹鼠老师==
+在天国的大本营可以找到它，提供一个特别有用的48小时除虫魔法
+![](https://subata.top/wp-content/uploads/2023/07/U@JHEHPIW6V4ZWK5O3X.png)
+
+## ==扎法丛林的鼹鼠老师==
+可以在大草原的入口找到它。提供两个48小时高级除虫魔法
+![](https://subata.top/wp-content/uploads/2023/07/GXZ3Y7HW8V80QK337CPL-1024x920.png)
+![](https://subata.top/wp-content/uploads/2023/07/IN7TE2OE17KBVO.png)
+![](https://subata.top/wp-content/uploads/2023/07/72CCXENN8HCUYE2LFHLT8.png)
+
+## ==阿瓦隆的鼹鼠老师==
+需要到达园艺等级10级，并完成主线任务“Queen of Light took her Bow”以及支线任务 “There’s the Shrub”才能进行学习。可以学到一键种植魔法一劳永逸
+![](https://subata.top/wp-content/uploads/2023/07/1MG0RR8WS81UQ2F8RGE.png)
+↑接取任务地点
+![](https://subata.top/wp-content/uploads/2023/07/QKM_Q8FY9_271Q4J@_2X.png)
+![](https://subata.top/wp-content/uploads/2023/07/NG3TOJ973JE4TD_SAJZ2.png)
+![](https://subata.top/wp-content/uploads/2023/07/QPBR55J1P4QSZRUACTV3.png)
+== **↑↑重点注意，由于没有二次确定很容易手滑，不推荐萌新学这个全部犁，会一键铲除所有土壤** ==
+![](https://subata.top/wp-content/uploads/2023/07/4H91VMGH7MC0J57S9QG6F.png)
+![](https://subata.top/wp-content/uploads/2023/07/QY@1@U26GFNUPR0UKSPI.png)
+
+## ==虫国的鼹鼠老师==
+需要达到园艺等级15级，完成整个支线“Bring the Green”才能进行学习。虫国主城左手边的螳螂镜子面具Zaltanna可以接取。提供特别有用的48小时呵护植物魔法
+![](https://subata.top/wp-content/uploads/2023/07/A@0NAOR61F5F2BA@P41O.png)
+![](https://subata.top/wp-content/uploads/2023/07/JO5N2QDRFCH7W4BEI_1F.png)
+![](https://subata.top/wp-content/uploads/2023/07/8SC9HB8BFNWIV3642TXD8.png)
+![](https://subata.top/wp-content/uploads/2023/07/ZGBG6PRZLPN3WAY8JP.png)
+![](https://subata.top/wp-content/uploads/2023/07/ZGBG6PRZLPN3WAY8JP.png)
+![](https://subata.top/wp-content/uploads/2023/07/DXPJO@SL0HZ8HF47TH6.png)
+![](https://subata.top/wp-content/uploads/2023/07/@399_AO1SAHN9RO.png)
+![](https://subata.top/wp-content/uploads/2023/07/K4O8BIKN@EHJDCBP.png)
+![](https://subata.top/wp-content/uploads/2023/07/GMH35J48VXURSYK80U8.png)
+以上就是所有可以习得的种植魔法，祝各位小魔法师早日实现小吃/琥珀/珍惜宝藏卡自由！
+
+## ==前期如何获得"沙发土豆"==
+1. 在解锁完"格林海姆"后,在"萨塔瓦斯塔德通道"找到"混乱的战士"不断Farming刷刷刷就可以拿到沙发土豆种子,但是爆率较低。所以并不推荐萌新前期把时间浪费在这里，但也是为想刷取的萌新提供这一种办法。
+2. 找"我是马猪是魔法装饰师"购买刷取土豆服务,20元=69个土豆种子=一片田 甚至有时候更多。
+
+
+
 
 
 
