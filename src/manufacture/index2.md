@@ -4,7 +4,7 @@ order: 1
 author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 ---\
 ==园艺在是相当重要的宠物小吃、珍惜宝藏卡、各类珍惜材料的来源。在你能够实现材料或小吃自由之前，需要大量的能量和时间投入。\
-本篇文章将会介绍新手如何从0开始园艺并逐渐成为Gardening Warlord。==!
+本篇文章将会介绍新手如何从0开始园艺并逐渐成为Gardening Warlord!==
 ## ==基础知识：==
 首先，玩家需要在达到12级时接取第一个园艺任务。\
 具体地址在拉文霍德（Ravenwood）-生命系学院（Life School）-穆林达（Moolinda）处接取。\
@@ -25,13 +25,13 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 
 基础能量大体上与等级相关，最高级为130能量。一些装备会增加玩家的最大能量上限，具体可以参考隔壁常驻卡包攻略了解卡包能量装的加成。此外，进行伐木darkmoor tier3外的石头钥匙Boss食人花，也可以获得武器戒指匕首三件套能量装。其中DM3石头钥匙Boss掉落的戒指和匕首是目前能量加的最多的饰品。
 
-无皇冠幣且不算家园结界可以去打札佛的镜湖，有splendid套装，可以+45能量上限。\
-- 辉煌套
+无皇冠幣且不算家园结界可以去打札佛的镜湖，有splendid套装，可以+45能量上限。
+# - 辉煌套
  - [辉煌头](https://www.wizard101central.com/wiki/Item:Splendid_Chapeau)
  - [辉煌衣](https://www.wizard101central.com/wiki/Item:Splendid_Tunic)
- - [辉煌腿](https://www.wizard101central.com/wiki/Item:Splendid_Boots)
-无皇冠幣且算家园结界可以去打Spiral Cup Gauntlet(80等以上)，有Greenwarden’s Energetic套装，可以+61能量上限。\
-- 树根套
+ - [辉煌腿](https://www.wizard101central.com/wiki/Item:Splendid_Boots)\
+无皇冠幣且算家园结界可以去打Spiral Cup Gauntlet(80等以上)，有Greenwarden’s Energetic套装，可以+61能量上限。
+# - 树根套
   -[树根头](https://www.wizard101central.com/wiki/Item:Greenwarden%27s_Energetic_Mask_(Level_90%2B))
   -[树根衣](https://www.wizard101central.com/wiki/Item:Greenwarden%27s_Energetic_Shroud_(Level_90%2B))
   -[树根腿](https://www.wizard101central.com/wiki/Item:Greenwarden%27s_Energetic_Boots_(Level_90%2B))\
@@ -83,19 +83,19 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 特別要注意的是，细微调整需要调整成绝对座標(要出现x、y、z轴)
 ## ==如何快速升级==
 3等前: \
-因为成长法术只能对单个植物生效，所以植物不要种太多(除非你能量很多)。种三颗集市可买的"黄色灯笼椒"来渡过前期。\
+因为成长法术只能对单个植物生效，所以植物不要种太多(除非你能量很多)。种三颗集市可买的"黄色灯笼椒"来渡过前期。
 
 3等到5等前:
-去沙鱷找土拨鼠学到的新成长法术作用范围没有到最大，但是也能有效地节省能量(相比1等地成长法术)。可以开始种舞王。\
+去沙鱷找土拨鼠学到的新成长法术作用范围没有到最大，但是也能有效地节省能量(相比1等地成长法术)。可以开始种舞王。
 
 5等后:\
-去木须找土拨鼠学到的新成长法术作用范围是最大的。可以开始种马铃薯、碗豆。\
+去木须找土拨鼠学到的新成长法术作用范围是最大的。可以开始种马铃薯、碗豆。
 
 10等:\
-去阿瓦隆-Caliburn找Sumner Fieldgold接There’s the Shrub的支线任务，可以解锁阿瓦隆的土拨鼠。(前提主线进度需要解完Queen of Light took her Bow)\
+去阿瓦隆-Caliburn找Sumner Fieldgold接There’s the Shrub的支线任务，可以解锁阿瓦隆的土拨鼠。(前提主线进度需要解完Queen of Light took her Bow)
 
 15等:\
-去虫国-Bastion找Zaltanna the Mirrormask接Bring The Green的支线任务，可以解锁虫国的土拨鼠。(前提主线进度需要解完Uneasy Allies)\
+去虫国-Bastion找Zaltanna the Mirrormask接Bring The Green的支线任务，可以解锁虫国的土拨鼠。(前提主线进度需要解完Uneasy Allies)
 
 ## ==48小时保护魔法==
 以防虫法术为例，两种法术的耗能不一样。 一般法术的优点是单次耗能少，但是过一阵子就还是会產生害虫。 长效保护法术虽然单次耗能多，但是可以持续一阵子，並且施放当下也可以驱虫。
