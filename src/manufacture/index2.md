@@ -110,12 +110,15 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
  **建议只选择自己需要的进行学习，因为学完所有技能的金币花费为2692100.** 
 ## ==任务技能：==
 完成12级接取的初始园艺任务即可免费获得。
-![](https://subata.top/wp-content/uploads/2023/07/3BSPCK9MS2ESYR88TJZW7.png)
-![](https://subata.top/wp-content/uploads/2023/07/A7DGVBNB4IMH23IU.png)
-![](https://subata.top/wp-content/uploads/2023/07/GHHBJKCVBZ3LUCSD.png)
-![](https://subata.top/wp-content/uploads/2023/07/YAIDE@4N9UKG8X5U5YND.png)
+
+![](https://subata.top/wp-content/uploads/2023/07/3BSPCK9MS2ESYR88TJZW7.png =150x)
+![](https://subata.top/wp-content/uploads/2023/07/A7DGVBNB4IMH23IU.png =150x)
+![](https://subata.top/wp-content/uploads/2023/07/GHHBJKCVBZ3LUCSD.png =150x)
+![](https://subata.top/wp-content/uploads/2023/07/YAIDE@4N9UKG8X5U5YND.png =150x)
+
 ## ==魔法城的鼹鼠老师==
 可以在傀儡庭院找到它
+
 ![](https://subata.top/wp-content/uploads/2023/07/G4Q8KSJT730H37X.png)
 ![](https://subata.top/wp-content/uploads/2023/07/3ZQQY5R3J4H4UOK8PSS.png)
 ![](https://subata.top/wp-content/uploads/2023/07/TL8X2_949OUQLF47.png)
@@ -126,6 +129,7 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 
 ## ==克罗克的鼹鼠老师==
 绿洲靠近金字塔的位置可以找到它，可以学到中范围魔法以及大片土壤开垦魔法
+
 ![](https://subata.top/wp-content/uploads/2023/07/XF4XA2TA3PNYSAPJTIM4LC5.png)
 ![](https://subata.top/wp-content/uploads/2023/07/2E3TDXS23W@OGOXCX.png)
 ![](https://subata.top/wp-content/uploads/2023/07/NIYOI@THPA50EAJFL.png)
@@ -137,6 +141,7 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 
 ## ==木须的鼹鼠老师==
 走出旋涡门所在的房间，可以在翡翠殿找到它。可以学到大范围魔法
+
 ![](https://subata.top/wp-content/uploads/2023/07/LITTBQ7_2TV6QIK0AHY4.png)
 ![](https://subata.top/wp-content/uploads/2023/07/@3EHLI3SHOW7MD6ZY6M.png)
 ![](https://subata.top/wp-content/uploads/2023/07/7D9KY34CTTL0MMBKQPXA7.png)
@@ -148,28 +153,35 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 
 ## ==天国的鼹鼠老师==
 在天国的大本营可以找到它，提供一个特别有用的48小时除虫魔法
+
 ![](https://subata.top/wp-content/uploads/2023/07/U@JHEHPIW6V4ZWK5O3X.png)
 
 ## ==扎法丛林的鼹鼠老师==
 可以在大草原的入口找到它。提供两个48小时高级除虫魔法
+
 ![](https://subata.top/wp-content/uploads/2023/07/GXZ3Y7HW8V80QK337CPL-1024x920.png)
+
 ![](https://subata.top/wp-content/uploads/2023/07/IN7TE2OE17KBVO.png)
 ![](https://subata.top/wp-content/uploads/2023/07/72CCXENN8HCUYE2LFHLT8.png)
 
 ## ==阿瓦隆的鼹鼠老师==
 需要到达园艺等级10级，并完成主线任务“Queen of Light took her Bow”以及支线任务 “There’s the Shrub”才能进行学习。可以学到一键种植魔法一劳永逸
-![](https://subata.top/wp-content/uploads/2023/07/1MG0RR8WS81UQ2F8RGE.png)
-↑接取任务地点
+
+![↑接取任务地点](https://subata.top/wp-content/uploads/2023/07/1MG0RR8WS81UQ2F8RGE.png)
+
 ![](https://subata.top/wp-content/uploads/2023/07/QKM_Q8FY9_271Q4J@_2X.png)
 ![](https://subata.top/wp-content/uploads/2023/07/NG3TOJ973JE4TD_SAJZ2.png)
-![](https://subata.top/wp-content/uploads/2023/07/QPBR55J1P4QSZRUACTV3.png)
-== **↑↑重点注意，由于没有二次确定很容易手滑，不推荐萌新学这个全部犁，会一键铲除所有土壤** ==
+
+![↑↑重点注意，由于没有二次确定很容易手滑，不推荐萌新学这个全部犁，会一键铲除所有土壤](https://subata.top/wp-content/uploads/2023/07/QPBR55J1P4QSZRUACTV3.png)
+
 ![](https://subata.top/wp-content/uploads/2023/07/4H91VMGH7MC0J57S9QG6F.png)
 ![](https://subata.top/wp-content/uploads/2023/07/QY@1@U26GFNUPR0UKSPI.png)
 
 ## ==虫国的鼹鼠老师==
 需要达到园艺等级15级，完成整个支线“Bring the Green”才能进行学习。虫国主城左手边的螳螂镜子面具Zaltanna可以接取。提供特别有用的48小时呵护植物魔法
+
 ![](https://subata.top/wp-content/uploads/2023/07/A@0NAOR61F5F2BA@P41O.png)
+
 ![](https://subata.top/wp-content/uploads/2023/07/JO5N2QDRFCH7W4BEI_1F.png)
 ![](https://subata.top/wp-content/uploads/2023/07/8SC9HB8BFNWIV3642TXD8.png)
 ![](https://subata.top/wp-content/uploads/2023/07/ZGBG6PRZLPN3WAY8JP.png)
@@ -178,6 +190,7 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 ![](https://subata.top/wp-content/uploads/2023/07/@399_AO1SAHN9RO.png)
 ![](https://subata.top/wp-content/uploads/2023/07/K4O8BIKN@EHJDCBP.png)
 ![](https://subata.top/wp-content/uploads/2023/07/GMH35J48VXURSYK80U8.png)
+
 以上就是所有可以习得的种植魔法，祝各位小魔法师早日实现小吃/琥珀/珍惜宝藏卡自由！
 
 ## ==前期如何获得"沙发土豆"==
