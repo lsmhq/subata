@@ -9,6 +9,10 @@ export default navbar([
                 link: '/subatamd/update',
                 icon: 'sun'
             },{
+                text: '前往下载',
+                link: '/subatamd/download',
+                icon: 'download'
+            },{
                 text: '使用说明',
                 link: '/subatamd/introduction',
                 icon: 'book'

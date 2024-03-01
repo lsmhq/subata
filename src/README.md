@@ -18,13 +18,9 @@ actions:
     link: ./template/start.md
     type: primary
 
-  - text: 启动器v2.1.6 x64
+  - text: 启动器下载
     type: default
-    link: http://101.43.174.221:3001/file/subataUpdate/Subata%20Setup%202.1.6.exe
-  
-  - text: 启动器v2.1.6 x32
-    type: default
-    link: http://101.43.174.221:3001/file/subatax64/Subata%20Setup%202.1.6.exe
+    link: ./subatamd/download.md
 
   - text: 联系我们-QQ
     type: default
