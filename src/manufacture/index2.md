@@ -5,7 +5,7 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 ---\
 ==园艺在是相当重要的宠物小吃、珍惜宝藏卡、各类珍惜材料的来源。在你能够实现材料或小吃自由之前，需要大量的能量和时间投入。\
 本篇文章将会介绍新手如何从0开始园艺并逐渐成为Gardening Warlord!==
-## ==基础知识：==
+## ==基础知识==
 首先，玩家需要在达到12级时接取第一个园艺任务。\
 具体地址在拉文霍德（Ravenwood）-生命系学院（Life School）-穆林达（Moolinda）处接取。\
 该任务将会带你去认识一个新NPC Farley，它将指导玩家如何开始园艺以及种植和照料作物。\
@@ -20,21 +20,21 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 ==↑以上为购买步骤，不要傻傻用皇冠买了==
 
 ![家园展示](https://subata.top/wp-content/uploads/2023/07/Photo-Houses-2020-05-30-07-22-03-768x432-1.jpg)
-## ==能量消耗：==
+## ==能量消耗==
 能量是园艺的一个重要部分。玩家可以通过观察左下角旁边的黄色水晶条来了解你有多少能量。每当玩家使用园艺魔法，能量会被消耗。升级可以补充能量，也可以从皇冠商店花250皇冠购买能量药水来恢复。
 
 基础能量大体上与等级相关，最高级为130能量。一些装备会增加玩家的最大能量上限，具体可以参考隔壁常驻卡包攻略了解卡包能量装的加成。此外，进行伐木darkmoor tier3外的石头钥匙Boss食人花，也可以获得武器戒指匕首三件套能量装。其中DM3石头钥匙Boss掉落的戒指和匕首是目前能量加的最多的饰品。
 
 无皇冠幣且不算家园结界可以去打札佛的镜湖，有splendid套装，可以+45能量上限。
-# - 辉煌套
+# 辉煌套
  - [辉煌头](https://www.wizard101central.com/wiki/Item:Splendid_Chapeau)
  - [辉煌衣](https://www.wizard101central.com/wiki/Item:Splendid_Tunic)
  - [辉煌腿](https://www.wizard101central.com/wiki/Item:Splendid_Boots)\
 无皇冠幣且算家园结界可以去打Spiral Cup Gauntlet(80等以上)，有Greenwarden’s Energetic套装，可以+61能量上限。
-# - 树根套
-  -[树根头](https://www.wizard101central.com/wiki/Item:Greenwarden%27s_Energetic_Mask_(Level_90%2B))
-  -[树根衣](https://www.wizard101central.com/wiki/Item:Greenwarden%27s_Energetic_Shroud_(Level_90%2B))
-  -[树根腿](https://www.wizard101central.com/wiki/Item:Greenwarden%27s_Energetic_Boots_(Level_90%2B))\
+# 树根套
+ - [树根头](https://www.wizard101central.com/wiki/Item:Greenwarden%27s_Energetic_Mask_(Level_90%2B))
+ - [树根衣](https://www.wizard101central.com/wiki/Item:Greenwarden%27s_Energetic_Shroud_(Level_90%2B))
+ - [树根腿](https://www.wizard101central.com/wiki/Item:Greenwarden%27s_Energetic_Boots_(Level_90%2B))\
 无皇冠幣的法杖可以透过合成获得，完成奥创打造任务可以得到一个+11能量和5渔运的法杖
 ## ==植物的不同阶段==
 幼苗：植物的初期形态。不需要对植物使用特定的魔法，只需要等待它们进入成长期。
@@ -195,7 +195,7 @@ author: 我是马龍我是魔法装饰师 ＆ 安超级帅比包 Amber & 老庄
 
 ## ==前期如何获得"沙发土豆"==
 1. 在解锁完"格林海姆"后,在"萨塔瓦斯塔德通道"找到"混乱的战士"不断Farming刷刷刷就可以拿到沙发土豆种子,但是爆率较低。所以并不推荐萌新前期把时间浪费在这里，但也是为想刷取的萌新提供这一种办法。
-2. 找"我是马猪是魔法装饰师"购买刷取土豆服务,20元=69个土豆种子=一片田 甚至有时候更多。
+2. 找"我是马猪是魔法装饰师(QQ:2726632635)"购买刷取土豆服务,20元=69个土豆种子=一片田 甚至有时候更多。
 
 
 
