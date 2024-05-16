@@ -5,7 +5,7 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import path from "path";
 export default defineUserConfig({
   
-  base: "/subata/",
+  base: "/subatapages/",
 
   lang: "zh-CN",
 
