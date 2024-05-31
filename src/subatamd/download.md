@@ -8,7 +8,7 @@ description: 下载
 # 文章作者，不填，则会回退到默认作者
 author: 蓝色灭火器
 # 分类
-category: 
+category:
   - 安装包
   - 启动器
 # 图标-详情请看：https://theme-hope.vuejs.press/zh/guide/interface/icon.html
@@ -27,9 +27,9 @@ timeline: true
 ::: tabs
 
 @tab:active windows
-<Button secTitle="win32" href="https://dwz.mk/gfuk7">windows10/11</Button>
+<Button secTitle="win32" href="https://dwz.mk/xxlp0">windows10/11</Button>
 
-<Button secTitle="win64" href="https://dwz.mk/f8s8q">windows10/11</Button>
+<Button secTitle="win64" href="https://dwz.mk/jrmzo">windows10/11</Button>
 
 <Button secTitle="暂不支持" href="">windows7</Button>
 @tab Mac
