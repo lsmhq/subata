@@ -27,9 +27,9 @@ timeline: true
 ::: tabs
 
 @tab:active windows
-<Button secTitle="win32" href="https://dwz.mk/xxlp0">windows10/11</Button>
+<Button secTitle="win32" href="http://101.43.174.221:3001/file/subataUpdate/Subata%20Setup%202.2.2.exe">windows10/11</Button>
 
-<Button secTitle="win64" href="https://dwz.mk/jrmzo">windows10/11</Button>
+<Button secTitle="win64" href="http://101.43.174.221:3001/file/subatax64/Subata%20Setup%202.2.2.exe">windows10/11</Button>
 
 <Button secTitle="暂不支持" href="">windows7</Button>
 @tab Mac
