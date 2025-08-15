@@ -27,16 +27,16 @@ actions:
     link: https://qm.qq.com/cgi-bin/qm/qr?k=M3OaXkN0Na4dTCjhuRFOg4lYVFM-T7zf&jump_from=webapi&authKey=F5F8uIKs3dO114jF/vlVHYAzbVRUyEarkRZOF3xQq1xj6qL6eYm3RZmr+lhPx82E
 
 highlights:
-  - header: Subata v2.1.6
+  - header: Subata v2.4.0
     image: /assets/image/subata.png
     bgImage: /subata/3-light.svg
     bgImageDark: /subata/3-dark.svg
     highlights:
       - title: 更丰富的界面元素
-      - title: 更高效的启动游戏
-      - title: 更小体积的安装包
-      - title: 清晰的补丁管理
-      - title: 方便的多账号管理
+      - title: 更迅速的启动方式
+      - title: 自由的风格搭配
+      - title: 免费自动皇冠答题
+      - title: 实时查看账号状态
 
   - header: 更多
     description: 
