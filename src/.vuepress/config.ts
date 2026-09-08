@@ -1,4 +1,5 @@
-import { defineUserConfig, viteBundler } from "vuepress";
+import { defineUserConfig } from "vuepress";
+import { viteBundler } from "@vuepress/bundler-vite";
 import theme from "./theme.js";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
@@ -20,7 +21,6 @@ export default defineUserConfig({
       css: {
         preprocessorOptions: {
           scss: {
-            // 屏蔽来自 node_modules 依赖（beta 版主题）的 Sass 弃用警告
             quietDeps: true,
             silenceDeprecations: ["import", "if-function", "color-functions", "legacy-js-api"],
           },
