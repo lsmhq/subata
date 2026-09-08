@@ -27,9 +27,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        env:
-          PNPM_ALLOW_BUILDS: esbuild,@parcel/watcher,vue-demi
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build site
         run: |
