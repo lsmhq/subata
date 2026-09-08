@@ -1,3 +1,5 @@
+name: Build & Deploy VuePress
+on:
   push:
     branches:
       - master
@@ -17,7 +19,7 @@ jobs:
         with:
           version: 12
           run_install: false
- 
+
       - name: Setup Node.js + pnpm cache
         uses: actions/setup-node@v4
         with:
@@ -30,7 +32,9 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build site
-        run: pnpm run build
+        run: |
+          node -e "globalThis.crypto = require('crypto').webcrypto"
+          pnpm run build
 
       - name: Deploy to gh‑pages branch
         uses: peaceiris/actions-gh-pages@v4
