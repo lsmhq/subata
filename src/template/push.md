@@ -70,11 +70,11 @@ banner: /assets/background/1698762378210.jpg
 
 ```sh
 
-git pull --rebase origin v-wiki
+git pull --rebase origin master
 
 git commit -m "你想说的话-随便写"
 
-git push -u origin v-wiki
+git push -u origin master
 
 ```
 
