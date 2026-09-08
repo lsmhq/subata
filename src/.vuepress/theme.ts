@@ -12,7 +12,7 @@ export default hopeTheme({
     url: "https://subata.top",
   },
 
-  docsBranch: 'v-wiki',
+  docsBranch: 'master',
 
   themeColor: true,
 
