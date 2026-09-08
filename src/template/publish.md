@@ -28,10 +28,10 @@ banner: /assets/background/1698762378210.jpg
 #---下方的为md正文内容
 ---
 
-## 发布
+## ~发布~（现在编辑完自动同步到github进行流水线自动更新网站）
 
-- [发布地址](https://gitee.com/lsmhq/subata/pages)
+- ~[发布地址](https://gitee.com/lsmhq/subata/pages)~
 
-- 点击链接中的更新按钮
+- ~点击链接中的更新按钮~
 
-- 结束
+- ~结束~
