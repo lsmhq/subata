@@ -12,7 +12,7 @@ export default hopeTheme({
     url: "https://subata.top",
   },
 
-  docsBranch: 'v-wiki',
+  docsBranch: 'master',
 
   themeColor: true,
 
@@ -47,7 +47,7 @@ export default hopeTheme({
 
   // page meta
   metaLocales: {
-    editLink: "前往 Gitee 编辑此页",
+    editLink: "编辑此页",
     lastUpdated: '最近修改时间'
   },
   plugins: {
