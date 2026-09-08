@@ -18,13 +18,13 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 12
-          run_install: false # 关闭内置自动缓存&安装逻辑
+          run_install: false
 
       - name: Setup Node.js + pnpm cache
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'pnpm' # 官方安全缓存方式，不会调用 pnpm store path
+          cache: 'pnpm'
 
       - name: Install dependencies
         env:
