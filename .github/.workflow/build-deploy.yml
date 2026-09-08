@@ -1,0 +1,31 @@
+name: Build and Deploy Pages
+on:
+  push:
+    branches: [ master ] # 监听同步过来代码的主分支
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取完整代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: 安装依赖 & 打包
+        run: |
+          npm install
+          npm run docs:build
+
+      - name: 部署dist到gh‑pages分支
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.vuepress/dist
+          publish_branch: gh-pages # 打包产物存放的分支
