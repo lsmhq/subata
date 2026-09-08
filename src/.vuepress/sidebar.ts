@@ -129,5 +129,12 @@ export default sidebar({
       children: 'structure',
       collapsible: true
     }
+  ],'/shop/':[
+    {
+      text: "商城",
+      icon: "star",
+      children: 'structure',
+      collapsible: true
+    }
   ]
 });

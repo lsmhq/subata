@@ -1,3 +1,23 @@
+---
+# 标题-sideBar在shortTitle不设置时使用title的文本
+title: 🌟 Arcane Convenience · Wizard101 综合商店 🌟
+# sideBar标题
+shortTitle: 简中
+# 分类
+category:
+  - 皇冠
+  - 商城
+# 图标-详情请看：https://theme-hope.vuejs.press/zh/guide/interface/icon.html
+# 是否原创文章
+isOriginal: true
+# 写作时间
+date: 2024-03-01
+# 置顶-数字越大越靠上
+sticky: 9
+# 时间线
+timeline: true
+#---下方的为md正文内容
+---
 
 # 🌟 Arcane Convenience · Wizard101 综合商店 🌟
 欢迎来到 **Arcane Convenience**！  

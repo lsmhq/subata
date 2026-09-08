@@ -22,5 +22,19 @@ export default navbar([
                 icon: 'question'
             }
         ]
-    }
+    },
+    // {
+    //     text: '商城',
+    //     children:[
+    //         {
+    //             text: '中文',
+    //             link: '/shop/zh-CN',
+    //             icon: 'chinese'
+    //         },{
+    //             text: 'English',
+    //             link: '/shop/en-US',
+    //             icon: 'english'
+    //         }
+    //     ]
+    // }
 ]);
