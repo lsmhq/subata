@@ -36,4 +36,4 @@ banner: /assets/background/1698762378210.jpg
 
 - ~~结束~~
 
-#现在编辑完自动同步到github进行流水线自动更新网站
+# 现在编辑完自动同步到github进行流水线自动更新网站
