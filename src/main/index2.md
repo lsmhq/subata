@@ -9,17 +9,18 @@ author: lsmhq，blaze
 
 首次下载游戏，游戏并不完整，需要使用官方启动器登录一次，等到"play!"按钮亮起方可进入游戏。
 
+或者直接使用steam下载完整游戏客户端
+
 ## 启动器自动安装（推荐）
 
 ### 启动器下载
 
-[点击下载: v1.4.11(公测-已失效)](http://101.43.174.221:226/down/sQvEqmH8aAUG)
 
-[点击下载: v2.1.X(公测)](http://101.43.174.221:3001/file/subataUpdate/Subata%20Setup%202.1.3.exe) （可能会提示安全问题，请忽略直接安装，或群内下载压缩包，群号在网站末尾，下方是2.0的视频教程【Wizard101或Pirate的PC端启动器】）
+[点击下载: v2.4.5(公测)](http://101.43.174.221:3001/file/subataUpdate/Subata%20Setup%202.4.5.exe) （可能会提示安全问题，请忽略直接安装，或群内下载压缩包，群号在网站末尾，下方是2.0的视频教程【Wizard101或Pirate的PC端启动器】）
 
 <BiliBili bvid="BV12c411F7VF"/>
 
-[Google Drive Download/谷歌网盘下载 v1.4.8](https://drive.google.com/file/d/1bqaW89hT2lDEKC3GRUVew-M2NMdqhyro/view?usp=sharing)
+[Google Drive Download/谷歌网盘下载 v2.4.2](https://drive.google.com/file/d/1-8I46Omix3lwEETydOrnEBhM03c9w9n_/view?usp=sharing)
 
 http://101.43.174.221:3001/#/bd
 
@@ -31,6 +32,7 @@ windows7用户专用下载通道：
 如何手动安装请看另一篇教程（待更新）
 
 [汉化补丁文件手动下载（Mac/Windows 7用户）](http://101.43.174.221:3001/#/bd)
+[爱发电下载最新补丁（推荐）](https://ifdian.net/a/subata)
 
 ### 安装汉化补丁
 
@@ -117,9 +119,9 @@ Mac用户：使用访达ifinder，访问路径 ~/Library/Application Support/Wiz
 
 打开文件中的Data → GameData 文件夹,然后停留在GameData文件夹中
 
-![目录](/images/game_path_2.webp =500x)
+![目录](/images/game_path_2.png =500x)
 
-“Locale_English-Root.wad”复制粘贴 至GameData文件夹 即安装完成
+“Locale_en-US-Root.wad”复制粘贴 至GameData文件夹 即安装完成
 
 ![目录](/images/game_path_3.png =500x)
 

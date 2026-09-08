@@ -33,7 +33,7 @@ timeline: true
 
 <Button secTitle="暂不支持" href="">windows7</Button>
 @tab Mac
-<Button :disable="true">暂不支持</Button>
+<Button disable="{{true}}">暂不支持</Button>
 :::
 
 [如何安装？](/subatamd/introduction.md)

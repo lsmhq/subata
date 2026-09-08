@@ -1,4 +1,4 @@
-﻿---
+---
 # 标题-sideBar在shortTitle不设置时使用title的文本
 title: 上传文件
 # sideBar标题
@@ -24,7 +24,7 @@ sticky: 9
 # 时间线
 timeline: true
 # 封面图
-banner: /assets/background/1698762378210.webp
+banner: /assets/background/1698762378210.jpg
 #---下方的为md正文内容
 ---
 
@@ -70,11 +70,11 @@ banner: /assets/background/1698762378210.webp
 
 ```sh
 
-git pull --rebase origin master
+git pull --rebase origin v-wiki
 
 git commit -m "你想说的话-随便写"
 
-git push -u origin master
+git push -u origin v-wiki
 
 ```
 

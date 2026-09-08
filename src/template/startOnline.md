@@ -1,4 +1,4 @@
-﻿---
+---
 # 标题-sideBar在shortTitle不设置时使用title的文本
 title: 线上书写
 # sideBar标题
@@ -24,7 +24,7 @@ sticky: 9
 # 时间线
 timeline: true
 # 封面图
-banner: /assets/background/1698762378210.webp
+banner: /assets/background/1698762378210.jpg
 #---下方的为md正文内容
 ---
 
@@ -42,7 +42,7 @@ banner: /assets/background/1698762378210.webp
 
 ### 图片如何上传?
 
-- [上传地址](https://gitee.com/lsmhq/subata/tree/master/src/.vuepress/public/images)
+- [上传地址](https://gitee.com/lsmhq/subata/tree/v-wiki/src/.vuepress/public/images)
 - 点击上传文件按钮
 
 ![上传按钮](/assets/image/20231110133144.png)
@@ -65,7 +65,7 @@ banner: /assets/background/1698762378210.webp
 
 ### 如何上传PDF？
 
-- [上传地址](https://gitee.com/lsmhq/subata/tree/master/src/.vuepress/public/PDF)
+- [上传地址](https://gitee.com/lsmhq/subata/tree/v-wiki/src/.vuepress/public/PDF)
 - 进入地址同上传图片操作
 - 引用PDF
 - 例如：上传了一张名为： ==empty.pdf== 的图片

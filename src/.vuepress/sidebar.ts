@@ -51,6 +51,12 @@ export default sidebar({
       children: 'structure',
       collapsible: true
     },{
+      text: "旧站攻略",
+      icon: "book",
+      prefix: "wordpress",
+      children: 'structure',
+      collapsible: true
+    },{
       text: "其他游戏系统",
       icon: "child",
       prefix: "other",
@@ -66,23 +72,23 @@ export default sidebar({
       children: [
         {
           text: '准备',
-          link: '/template/start',
+          link: '/template/start.md',
           icon: 'hand'
         },{
           text: 'Clone 仓库',
-          link: '/template/clone',
+          link: '/template/clone.md',
           icon: 'book'
         },{
           text: 'Vscode 书写',
-          link: '/template/vsc',
+          link: '/template/vsc.md',
           icon: 'pen'
         },{
           text: '上传文件',
-          link: '/template/push',
+          link: '/template/push.md',
           icon: 'upload'
         },{
           text: '线上书写可跳过以上所有步骤',
-          link: '/template/startOnline',
+          link: '/template/startOnline.md',
           icon: 'cat'
         }
       ],
@@ -91,27 +97,30 @@ export default sidebar({
       text: '更新流程',
       icon: 'key',
       collapsible: true,
-children:[
+      children:[
         {
           text: '本地运行',
-          link: '/template/dev'
+          link: '/template/dev.md'
         },{
           text: '本地打包',
-          link: '/template/build'
+          link: '/template/build.md'
         },{
           text: '更新发布',
-          link: '/template/publish'
+          link: '/template/publish.md'
         },
       ]
     },{
       text: '书写语法介绍',
-      link: '/template/template'
+      link: '/template/template.md',
+      icon: 'code'
     },{
       text: '自定义组件介绍',
-      link: '/template/components'
+      link: '/template/components.md',
+      icon: 'code'
     },{
       text: '原则',
-      link: '/template/rules'
+      link: '/template/rules.md',
+      icon: 'heart'
     }
   ],'/subatamd/':[
     {
