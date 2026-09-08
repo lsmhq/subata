@@ -6,7 +6,7 @@ category:
   - 游戏指南
 ---
 
-![](/images/bundle.webp)
+![](/images/bundle.png)
 
 ## 一、捆绑包（Bundles）
 

@@ -4,8 +4,8 @@ import theme from "./theme.js";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import path from "path";
-
 export default defineUserConfig({
+  
   base: "/subata/",
 
   lang: "zh-CN",
@@ -31,6 +31,7 @@ export default defineUserConfig({
 
   plugins: [
     searchProPlugin({
+      //
       // 索引全部内容
       indexContent: true,
 
@@ -64,4 +65,6 @@ export default defineUserConfig({
       }
     })
   ]
+  // Enable it with pwa
+  // shouldPrefetch: false,
 });

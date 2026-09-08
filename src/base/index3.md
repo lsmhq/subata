@@ -21,17 +21,17 @@ order: 3
 
 每次宠物的等级提升，除了从王者到极限以外，它将获得某种形式的天赋。从王者到极限并不会开启天赋，而是送给玩家一个+65属性的随机宠物宝石。
 
-![](/images/ZPZW9OENUATVR718RS-1024x768.webp =300x)
+![](/images/ZPZW9OENUATVR718RS-1024x768.png =300x)
 
 ## **了解宠物的各项数值**
 
 宠物有五个影响其天赋的主要属性 - 力量、智力、敏捷、意志和精神。**每个属性的数值越高，你的宠物天赋技能的百分比就越高**。例如，一个拥有高属性的宠物，如下图所示，将会给予玩家更多的伤害或抵抗力。当然，这同样取决于宠物的天赋。举个例子：同样是火焰攻击天赋，火焰精通者（fire-dealer）的最高值是11点，而火焰-恩赐（fire-boon）则只有4点。
 
-![](/images/6I4ADOMIBPE34Q2@Y8N-1024x797.webp =300x)
+![](/images/6I4ADOMIBPE34Q2@Y8N-1024x797.png =300x)
 
-![](/images/OWCUIZHA5R@4D8A8H.webp =300x)
+![](/images/OWCUIZHA5R@4D8A8H.png =300x)
 
-![](/images/5LF3QV@_BEF9PI@69S.webp =300x)
+![](/images/5LF3QV@_BEF9PI@69S.png =300x)
 
 宠物在经过训练后，最好将所有属性都达到最大值。当然也有例外，智力这个属性影响的加成并不重要，所以可以暂时忽略它。
 
@@ -80,7 +80,7 @@ order: 3
 
 这类天赋可以提供攻击、防御、治疗、金豆率、豹击、穿刺等。通常来说，除了金豆率、豹击和治疗，攻击，防御和穿刺是最泛用的天赋类型。
 
-![](/images/DC5E9NBRU0GPPSLQWSY.webp =300x)
+![](/images/DC5E9NBRU0GPPSLQWSY.png =300x)
 
 ↑一只标准的攻+防+穿刺的宠物
 
@@ -88,17 +88,17 @@ order: 3
 
 这类May cast可以自动施放很多不同的魔法，包括全局魔法、刃、护盾、光环、治疗等。May cast天赋不会占用玩家的豆子。由于有可能触发治疗的技能，这些天赋在盾类/奶妈类的玩家角色中比较受欢迎。当然，由于爬塔的Deckathalon活动中角色本身属性不会带进塔里，这类天赋也很受欢迎。
 
-![](/images/UV8C@C_BNFYAKGKQG.webp =300x)
+![](/images/UV8C@C_BNFYAKGKQG.png =300x)
 
 ### **能力属性提升天赋**
 
 这类天赋可以提升宠物的属性数值。通常来说，只有最高的+65Mighty（力量）是最泛用的，它可以分别提升一只宠物的最大攻击、防御、穿刺。以下是一只带了+65天赋和不带65天赋的宠物数值对比：
 
-![](/images/DHY_5_W4DB7DFUAPC.webp =300x)
+![](/images/DHY_5_W4DB7DFUAPC.png =300x)
 
 ↑不带65力量天赋
 
-![](/images/UT4T@1HED2A9G176B_2.webp =300x)
+![](/images/UT4T@1HED2A9G176B_2.png =300x)
 
 ↑带65力量天赋
 
@@ -110,7 +110,7 @@ order: 3
 
 ![](/images/E@UJ3WE8_8L58CAPH@LD.png =300x)
 
-![](/images/X4NKS4LT9JSRSL3MVDP-1024x491.webp =300x)
+![](/images/X4NKS4LT9JSRSL3MVDP-1024x491.png =300x)
 
 ### **冒险天赋**
 
@@ -124,7 +124,7 @@ order: 3
 
 当你的巫师等级达到15，同时宠物升级到长者时，可以获得一个宝石插槽。玩家可以在其中添加一颗星形珠宝。这些宝石可以提供许多不同的天赋，如概率释放、能量、提升玩家属性等等等等。部分宝石的添加有宠物的等级限制，例如火焰精通者（fire-dealer）这类的高级天赋必须在宠物达到极限时才能添加。这些宝石可以通过制作、园艺、BOSS掉落，甚至可以从皇冠商店的包裹中购买（但不推荐）。目前最多的掉落地点是天城（Empyrea）-爱丽儿森林(Ariel Jungle=300x)-萤火虫(Fire Fly=300x)。
 
-![](/images/L@ZDISYUJ1R15VSE3.webp =300x)
+![](/images/L@ZDISYUJ1R15VSE3.png =300x)
 
 ↑极限才能添加的高级宝石
 
