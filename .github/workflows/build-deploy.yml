@@ -14,21 +14,24 @@ jobs:
         with:
           fetch-depth: 0
 
+      # 1. 安装pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      # 2. 设置node版本，必须放在pnpm安装之后
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'pnpm'
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
+      - name: Install dependencies
+        run: pnpm install
 
-      - name: Install dependencies & build
-        run: |
-          pnpm install
-          pnpm run docs:build
+      - name: Build docs
+        run: pnpm run docs:build
 
       - name: Deploy to gh‑pages branch
         uses: peaceiris/actions-gh-pages@v4
