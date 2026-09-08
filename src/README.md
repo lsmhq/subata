@@ -94,7 +94,7 @@ highlights:
 
       - title: 旧攻略归档
         icon: archive
-        link: /wordpress/index1.html
+        link: /wordpress/
 
       - title: 其他内容
         icon: child
