@@ -66,23 +66,23 @@ export default sidebar({
       children: [
         {
           text: '准备',
-          link: '/template/start.md',
+          link: '/template/start',
           icon: 'hand'
         },{
           text: 'Clone 仓库',
-          link: '/template/clone.md',
+          link: '/template/clone',
           icon: 'book'
         },{
           text: 'Vscode 书写',
-          link: '/template/vsc.md',
+          link: '/template/vsc',
           icon: 'pen'
         },{
           text: '上传文件',
-          link: '/template/push.md',
+          link: '/template/push',
           icon: 'upload'
         },{
           text: '线上书写可跳过以上所有步骤',
-          link: '/template/startOnline.md',
+          link: '/template/startOnline',
           icon: 'cat'
         }
       ],
@@ -91,30 +91,27 @@ export default sidebar({
       text: '更新流程',
       icon: 'key',
       collapsible: true,
-      children:[
+children:[
         {
           text: '本地运行',
-          link: '/template/dev.md'
+          link: '/template/dev'
         },{
           text: '本地打包',
-          link: '/template/build.md'
+          link: '/template/build'
         },{
           text: '更新发布',
-          link: '/template/publish.md'
+          link: '/template/publish'
         },
       ]
     },{
       text: '书写语法介绍',
-      link: '/template/template.md',
-      icon: 'code'
+      link: '/template/template'
     },{
       text: '自定义组件介绍',
-      link: '/template/components.md',
-      icon: 'code'
+      link: '/template/components'
     },{
       text: '原则',
-      link: '/template/rules.md',
-      icon: 'heart'
+      link: '/template/rules'
     }
   ],'/subatamd/':[
     {

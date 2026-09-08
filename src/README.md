@@ -28,7 +28,7 @@ actions:
 
 highlights:
   - header: Subata v2.4.0
-    image: /assets/image/subata.png
+    image: /assets/image/subata.webp
     bgImage: /subata/3-light.svg
     bgImageDark: /subata/3-dark.svg
     highlights:

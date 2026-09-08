@@ -9,7 +9,7 @@ icon: book
 
 - 前往本站首页面，点击下载前往选择合适版本进行下载，等待下载完成
 
-![首页](/subataImgs/20231122092949.png =200x)
+![首页](/subataImgs/20231122092949.webp =200x)
 
 ![下载进度](/subataImgs/download.png =200x)
 
@@ -17,7 +17,7 @@ icon: book
 
 ![保留](/subataImgs/finished.png =200x)
 
-![任然保留](/subataImgs/20231122093930.png =200x)
+![任然保留](/subataImgs/20231122093930.webp =200x)
 
 - 此时，我们打开下载好的安装包，可能系统会阻止
 

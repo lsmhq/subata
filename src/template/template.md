@@ -1,4 +1,4 @@
----
+﻿---
 # 标题-sideBar在shortTitle不设置时使用title的文本
 title: 模板汇总
 # sideBar标题
@@ -24,7 +24,7 @@ sticky: 9
 # 时间线
 timeline: true
 # 封面图
-banner: /assets/background/1698762378210.jpg
+banner: /assets/background/1698762378210.webp
 #---下方的为md正文内容
 ---
 ## 文章信息配置代码展示
@@ -66,7 +66,7 @@ sticky: 9
 timeline: true
 
 # 封面图
-banner: /assets/background/1698762378210.jpg
+banner: /assets/background/1698762378210.webp
 
 # ---下方的为md正文内容
 ---
@@ -234,7 +234,7 @@ console.log(code)
 
 ## 图片引入展示
 
-![图片名称](/assets/background/1698762378175.jpg =200x300)
+![图片名称](/assets/background/1698762378175.webp =200x300)
 
 ### 不设置宽高
 
@@ -264,7 +264,7 @@ console.log(code)
 
 ``` md
 <!-- 基础写法 -->
-![图片名称](/assets/background/1698762378175.jpg =200x300)
+![图片名称](/assets/background/1698762378175.webp =200x300)
 
 ### 不设置宽高
 
@@ -290,7 +290,7 @@ console.log(code)
 
 ``` html
 <img 
-  src="/assets/background/1698762378175.jpg" 
+  src="/assets/background/1698762378175.webp" 
   alt="图片名称" 
   width=200 
   height=300
@@ -334,7 +334,7 @@ tab2的内容
 ```card
 title: 蓝色灭火器
 desc: 蓝色灭火器简介
-logo: /assets/background/1698762378195.jpg
+logo: /assets/background/1698762378195.webp
 link: https://gitee.com/lsmhq
 color: rgba(253, 230, 138, 0.15)
 ```
@@ -345,7 +345,7 @@ color: rgba(253, 230, 138, 0.15)
     ```card
     title: 蓝色灭火器
     desc: lsmhqlsmhqlsmhqlsmhqlsmhqlsmhqlsmhqlsmhq
-    logo: /assets/background/1698762378195.jpg
+    logo: /assets/background/1698762378195.webp
     link: https://gitee.com/lsmhq
     color: #ecf4fa
     ```

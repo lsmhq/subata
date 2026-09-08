@@ -1,4 +1,4 @@
----
+﻿---
 # 标题-sideBar在shortTitle不设置时使用title的文本
 title: 克隆
 # sideBar标题
@@ -24,7 +24,7 @@ sticky: 9
 # 时间线
 timeline: true
 # 封面图
-banner: /assets/background/1698762378210.jpg
+banner: /assets/background/1698762378210.webp
 #---下方的为md正文内容
 ---
 

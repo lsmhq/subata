@@ -117,7 +117,7 @@ Mac用户：使用访达ifinder，访问路径 ~/Library/Application Support/Wiz
 
 打开文件中的Data → GameData 文件夹,然后停留在GameData文件夹中
 
-![目录](/images/game_path_2.png =500x)
+![目录](/images/game_path_2.webp =500x)
 
 “Locale_English-Root.wad”复制粘贴 至GameData文件夹 即安装完成
 

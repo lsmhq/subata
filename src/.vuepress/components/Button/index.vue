@@ -11,6 +11,7 @@ export default {
   },
   methods: {
     click() {
+      if (this.disable) return
       this.href && window.open(this.href, '_blank')
     }
   },
@@ -21,7 +22,7 @@ export default {
 </script>
 
 <template>
-  <button class="btn btn-default ripple btn-lg" v-on:click="click">
+  <button class="btn btn-default ripple btn-lg" v-on:click="click" v-bind:disabled="disable">
     <div class="mainTitle">
       <slot></slot>
     </div>
@@ -42,6 +43,11 @@ export default {
   background-color: #0071C5;
   color: #ffffff;
   margin: 20px;
+}
+
+.ripple:disabled {
+  cursor: not-allowed;
+  background-color: #9aa0a6;
 }
 
 .mainTitle {

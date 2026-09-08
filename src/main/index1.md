@@ -10,7 +10,7 @@ tag:
 
 最近入坑的萌新渐渐多起来啦，但是很多萌新反应表示**不清楚在哪里注册好**以及**登陆不上**等问题。于是本章节给萌新一 一解答所遇到的问题！
 
-![欢迎](/images/welcome.png =500x)
+![欢迎](/images/welcome.webp =500x)
 ## 注册流程
 
 ### 选择渠道
@@ -56,7 +56,7 @@ Steam服下载的客户端无法登录官网服账号，官网服下载的客户
 
 是直接在（[Wizard101的**官网**](https://www.wizard101.com/game)）**进行注册**。（提示：进入官网**需要加速器**——如何获得和使用加速器此篇**后文会提及**噢）**注册后**会提示可以**进行客户端下载**。下载后**登陆账号**即可进入游戏。
 
-![官网注册](/images/signup_official.png =500x)
+![官网注册](/images/signup_official.webp =500x)
 
 ### steam服注册流程
 
@@ -64,11 +64,11 @@ Steam服下载的客户端无法登录官网服账号，官网服下载的客户
 
 Steam版账号注册地址：[steam版账号游戏注册（美服）](https://www.wizard101.com/patchClient/steamreg?abs=1)
 
-![Steam注册](/images/signup_steam.png =500x)
+![Steam注册](/images/signup_steam.webp =500x)
 
 ### 如何填写注册信息
 
-![详解](/images/signup.png =500x)
+![详解](/images/signup.webp =500x)
 
 <!-- ## **汉化补丁**相关 -->
 
