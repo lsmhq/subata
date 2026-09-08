@@ -14,13 +14,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      # 1. 安装pnpm
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9
 
-      # 2. 设置node版本，必须放在pnpm安装之后
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -30,12 +28,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build docs
-        run: pnpm run docs:build
+      - name: Build site
+        run: pnpm run build
 
       - name: Deploy to gh‑pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/.vuepress/dist
+          publish_dir: ./src/.vuepress/dist
           publish_branch: gh-pages
