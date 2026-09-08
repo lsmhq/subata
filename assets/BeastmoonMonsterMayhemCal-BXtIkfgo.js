@@ -1,0 +1,1 @@
+var e=`/subata/images/BeastmoonMonsterMayhemCal.png`;export{e as t};

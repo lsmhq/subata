@@ -1,0 +1,1 @@
+var e=`/subata/images/image-5.png`,t=`/subata/images/image-6.png`;export{e as n,t};
