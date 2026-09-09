@@ -21,13 +21,26 @@
           placeholder="选择一个卡包"
           size="small"
         />
-        <n-button type="primary" size="small" :disabled="crowns < pack.crowns" @click="openPack">
-          开包（{{ pack.crowns }} 皇冠）
-        </n-button>
+        <template v-if="bulkTotal">
+          <n-button type="primary" size="small" @click="nextBulk">
+            下一包（剩 {{ bulkLeft }} 包）
+          </n-button>
+          <span class="bulk-tip">十连开包中，皇冠已一次性扣除，点「下一包」逐包揭晓</span>
+        </template>
+        <template v-else>
+          <n-button type="primary" size="small" :disabled="crowns < pack.crowns" @click="openPack">
+            开包（{{ pack.crowns }} 皇冠）
+          </n-button>
+          <n-button type="primary" size="small" :disabled="crowns < pack.crowns * 10" @click="open10">
+            开10包（{{ pack.crowns * 10 }} 皇冠）
+          </n-button>
+        </template>
       </div>
 
       <div v-if="results.length" class="results">
-        <div class="results-title">本次开包内容</div>
+        <div class="results-title">
+          {{ bulkTotal ? "本次开包内容 · 第 " + (bulkTotal - bulkLeft) + "/" + bulkTotal + " 包" : "本次开包内容" }}
+        </div>
         <div class="cards">
           <div
             v-for="(item, index) in results"
@@ -88,32 +101,6 @@
         </div>
       </n-card>
 
-      <div v-if="results.length" class="results">
-        <div class="results-title">本次开包内容</div>
-        <div class="cards">
-          <div
-            v-for="(item, index) in results"
-            :key="index"
-            class="card"
-            :class="{ flipped: flipped[index], 'r-common': item.rarity === 'common', 'r-uncommon': item.rarity === 'uncommon', 'r-rare': item.rarity === 'rare', 'r-ultra-rare': item.rarity === 'ultra-rare', 'r-epic': item.rarity === 'epic' }"
-          >
-            <div class="card-inner">
-              <div class="face face-cover">
-                <span class="cover-mark">?</span>
-              </div>
-              <div class="face face-content">
-                <div class="content-name">{{ item.name }}</div>
-                <div class="content-tags">
-                  <span class="preview-type">{{ typeLabel(item.type) }}</span>
-                  <span class="content-rare">{{ rarityLabel(item.rarity) }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="results-note">官方卡包每包给出 7 件随机物品；掉率为社区按长期开包整理的估算，不代表官方数值。</div>
-      </div>
-
       <div v-if="pack" class="bag">
         <h4>本包背包（独特物品集齐进度）</h4>
         <div class="bag-list">
@@ -167,6 +154,8 @@ export default {
       crowns: saved && typeof saved.crowns === "number" ? saved.crowns : 999999,
       total: saved && typeof saved.total === "number" ? saved.total : 0,
       bag: saved && saved.bag ? saved.bag : {},
+      bulkTotal: saved && typeof saved.bulkTotal === "number" ? saved.bulkTotal : 0,
+      bulkLeft: saved && typeof saved.bulkLeft === "number" ? saved.bulkLeft : 0,
       results: [],
       flipped: [],
       dark: false,
@@ -193,6 +182,8 @@ export default {
     packKey() {
       this.results = [];
       this.flipped = [];
+      this.bulkTotal = 0;
+      this.bulkLeft = 0;
     },
   },
   methods: {
@@ -247,8 +238,7 @@ export default {
     newResult(name, type, rarity, base) {
       return { name, type, rarity, base: !!base };
     },
-    openPack() {
-      if (this.crowns < this.pack.crowns) return;
+    rollOnce() {
       const gates = [
         ["mount_perm", 0.01],
         ["pet", 0.03],
@@ -284,7 +274,31 @@ export default {
         }
       }
 
-      const results = [...misc, ...specials];
+      return { results: [...misc, ...specials], specials };
+    },
+    openPack() {
+      if (this.bulkTotal) return;
+      this.applyRoll();
+    },
+    open10() {
+      if (this.bulkTotal) return;
+      const cost = this.pack.crowns * 10;
+      if (this.crowns < cost) return;
+      this.crowns -= cost;
+      this.bulkTotal = 10;
+      this.bulkLeft = 10;
+      this.nextBulk();
+    },
+    nextBulk() {
+      if (this.bulkLeft <= 0) {
+        this.bulkTotal = 0;
+        return;
+      }
+      this.bulkLeft -= 1;
+      this.applyRoll();
+    },
+    applyRoll() {
+      const { results, specials } = this.rollOnce();
 
       const bag = { ...this.bag };
       specials.forEach((it) => {
@@ -293,7 +307,6 @@ export default {
       });
 
       this.bag = bag;
-      this.crowns -= this.pack.crowns;
       this.total += 1;
       this.results = results;
       this.flipped = results.map(() => false);
@@ -317,6 +330,8 @@ export default {
       this.crowns = 999999;
       this.total = 0;
       this.bag = {};
+      this.bulkTotal = 0;
+      this.bulkLeft = 0;
       this.results = [];
       this.flipped = [];
       if (this._flipTimers) {
@@ -334,6 +349,8 @@ export default {
             crowns: this.crowns,
             total: this.total,
             bag: this.bag,
+            bulkTotal: this.bulkTotal,
+            bulkLeft: this.bulkLeft,
             packKey: this.packKey,
           })
         );
@@ -385,6 +402,10 @@ export default {
 }
 .pack-select {
   width: 340px;
+}
+.bulk-tip {
+  font-size: 12px;
+  color: #999;
 }
 .pack-info {
   margin-bottom: 14px;

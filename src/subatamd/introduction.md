@@ -1,29 +1,8 @@
 ---
-# 标题-sideBar在shortTitle不设置时使用title的文本
-title: 如何安装
-# sideBar标题
-shortTitle: 如何安装
-# 描述
-description: 如何安装
-# 文章作者，不填，则会回退到默认作者
+title: 使用说明
 author: 蓝色灭火器
-# 分类
-category: 
-  - 安装
-# 标签
-tag: 
-  - 教程
-# 图标-详情请看：https://theme-hope.vuejs.press/zh/guide/interface/icon.html
+order: 1
 icon: book
-# 是否原创文章
-isOriginal: true
-# 写作时间
-date: 2023-11-06
-# 置顶-数字越大越靠上
-sticky: 9
-# 时间线
-timeline: true
-#---下方的为md正文内容
 ---
 
 ## 安装
