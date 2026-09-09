@@ -26,6 +26,17 @@
         </n-button>
       </div>
 
+      <div class="odds">
+        <div class="odds-title">卡包掉率参考（每包，社区估算）</div>
+        <ul class="odds-list">
+          <li><b>永久坐骑</b>（大奖）：约 <b>0.5%～1.5%</b>，平均 70–200 包出一只</li>
+          <li><b>卡包限定宠物</b>：约 <b>2%～4%</b></li>
+          <li><b>毕业套装单件</b>：约 <b>5%</b>，凑整套看运气、单件易重复</li>
+          <li><b>限时坐骑</b>（1天 / 7天）：约 <b>十几 %</b>，仅临时使用，非大奖</li>
+          <li><b>其余绝大多数</b>：零食、家具、宝藏卡、金币、普通饰品</li>
+        </ul>
+      </div>
+
       <n-card v-if="pack" size="small" class="pack-info" :title="pack.name">
         <template #header>
           <div class="pack-head">
@@ -50,17 +61,6 @@
           </div>
         </div>
       </n-card>
-
-      <div class="odds">
-        <div class="odds-title">卡包掉率参考（每包，社区估算）</div>
-        <ul class="odds-list">
-          <li><b>永久坐骑</b>（大奖）：约 <b>0.5%～1.5%</b>，平均 70–200 包出一只</li>
-          <li><b>卡包限定宠物</b>：约 <b>2%～4%</b></li>
-          <li><b>毕业套装单件</b>：约 <b>5%</b>，凑整套看运气、单件易重复</li>
-          <li><b>限时坐骑</b>（1天 / 7天）：约 <b>十几 %</b>，仅临时使用，非大奖</li>
-          <li><b>其余绝大多数</b>：零食、家具、宝藏卡、金币、普通饰品</li>
-        </ul>
-      </div>
 
       <div v-if="results.length" class="results">
         <div class="results-title">本次开包内容</div>
