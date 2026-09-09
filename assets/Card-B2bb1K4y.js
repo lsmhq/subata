@@ -1,0 +1,1 @@
+import{$ as e,F as t}from"./app-CuKyqbJ0.js";import{t as n}from"./plugin-vue_export-helper-BDNMzG2s.js";var r={data(){return{}},props:{name:0},methods:{},created:()=>{}},i=[`src`];function a(n,r,a,o,s,c){return e(),t(`img`,{src:`/assets/icon/${a.name}`},null,8,i)}var o=n(r,[[`render`,a]]);export{o as default};
