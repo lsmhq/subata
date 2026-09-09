@@ -33,7 +33,7 @@
           <n-select
             class="attr-gem"
             size="small"
-            :value="gemSelect"
+            :value="gems[index]"
             :options="gemOptions"
             placeholder="宝石"
             @update:value="onGem(index, $event)"
@@ -121,17 +121,26 @@ export default {
     } catch (e) {
       saved = null;
     }
-    const attr = Array.isArray(saved) && saved.length === calculate.data.length
-      ? saved
-      : calculate.data.map(() => 0);
+    let attr;
+    let gems;
+    if (saved && saved.attr && saved.gems) {
+      attr = saved.attr;
+      gems = saved.gems;
+    } else if (Array.isArray(saved) && saved.length === calculate.data.length) {
+      attr = saved;
+      gems = calculate.data.map(() => 0);
+    } else {
+      attr = calculate.data.map(() => 0);
+      gems = calculate.data.map(() => 0);
+    }
     return {
       darkTheme,
       dark: false,
       data: calculate.data,
       data_right: calculate.data_right,
       attr,
+      gems,
       toFixed: 3,
-      gemSelect: null,
       gemOptions: [
         { label: "无", value: 0 },
         { label: "+25", value: 25 },
@@ -164,8 +173,16 @@ export default {
       return keys.map((k) => this.iconUrl(k));
     },
     onGem(index, value) {
-      this.gemSelect = null;
-      if (value) this.quick(index, value);
+      const old = this.gems[index] || 0;
+      const delta = value - old;
+      if (delta !== 0) {
+        this.attr[index] = Math.min(
+          this.data[index].max,
+          Math.max(0, this.attr[index] + delta)
+        );
+      }
+      this.gems[index] = value;
+      this.save();
     },
     quick(index, delta) {
       const value = Math.min(this.data[index].max, Math.max(0, this.attr[index] + delta));
@@ -193,7 +210,10 @@ export default {
     },
     save() {
       if (typeof localStorage !== "undefined") {
-        localStorage.setItem(this.storageKey, JSON.stringify(this.attr));
+        localStorage.setItem(
+          this.storageKey,
+          JSON.stringify({ attr: this.attr, gems: this.gems })
+        );
       }
     },
     syncDark() {
