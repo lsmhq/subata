@@ -78,6 +78,31 @@ export default navbar([
             }
         ]
     },
+    {
+        text: '网站工具',
+        children:[
+            {
+                text: '宠物计算器',
+                link: '/subata-tools/index3',
+                icon: 'calculator'
+            },
+            {
+                text: '皇冠答题',
+                link: '/subata-tools/index4',
+                icon: 'question-circle'
+            },
+            {
+                text: '卡包抽卡',
+                link: '/subata-tools/index5',
+                icon: 'box-open'
+            },
+            {
+                text: '物品图鉴',
+                link: '/subata-tools/index6',
+                icon: 'book-open'
+            }
+        ]
+    },
     // {
     //     text: '商城',
     //     children:[

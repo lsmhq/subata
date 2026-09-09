@@ -1,41 +1,36 @@
 <template>
-  <n-config-provider :theme="dark ? darkTheme : null">
-    <div class="pack-sim">
-      <div class="head">
-        <div class="crowns">
-          <span class="label">皇冠余额</span>
-          <span class="value">{{ crowns.toLocaleString() }}</span>
-        </div>
-        <div class="crowns">
-          <span class="label">开包次数</span>
-          <span class="value">{{ total }}</span>
-        </div>
-        <n-button size="small" quaternary @click="reset">重置</n-button>
+  <div class="pack-sim" :class="{ dark }">
+    <div class="head">
+      <div class="crowns">
+        <span class="label">皇冠余额</span>
+        <span class="value">{{ crowns.toLocaleString() }}</span>
       </div>
+      <div class="crowns">
+        <span class="label">开包次数</span>
+        <span class="value">{{ total }}</span>
+      </div>
+      <button class="link-btn" @click="reset">重置</button>
+    </div>
 
-      <div class="control">
-        <n-select
-          class="pack-select"
-          v-model:value="packKey"
-          :options="packOptions"
-          placeholder="选择一个卡包"
-          size="small"
-        />
-        <template v-if="bulkTotal">
-          <n-button type="primary" size="small" @click="nextBulk">
-            下一包（剩 {{ bulkLeft }} 包）
-          </n-button>
-          <span class="bulk-tip">十连开包中，皇冠已一次性扣除，点「下一包」逐包揭晓</span>
-        </template>
-        <template v-else>
-          <n-button type="primary" size="small" :disabled="crowns < pack.crowns" @click="openPack">
-            开包（{{ pack.crowns }} 皇冠）
-          </n-button>
-          <n-button type="primary" size="small" :disabled="crowns < pack.crowns * 10" @click="open10">
-            开10包（{{ pack.crowns * 10 }} 皇冠）
-          </n-button>
-        </template>
-      </div>
+    <div class="control">
+      <select class="pack-select" v-model="packKey">
+        <option v-for="p in packs" :key="p.key" :value="p.key">{{ p.name }}</option>
+      </select>
+      <template v-if="bulkTotal">
+        <button class="btn primary" @click="nextBulk">
+          下一包（剩 {{ bulkLeft }} 包）
+        </button>
+        <span class="bulk-tip">十连开包中，皇冠已一次性扣除，点「下一包」逐包揭晓</span>
+      </template>
+      <template v-else>
+        <button class="btn primary" :disabled="crowns < pack.crowns" @click="openPack">
+          开包（{{ pack.crowns }} 皇冠）
+        </button>
+        <button class="btn primary" :disabled="crowns < pack.crowns * 10" @click="open10">
+          开10包（{{ pack.crowns * 10 }} 皇冠）
+        </button>
+      </template>
+    </div>
 
       <div v-if="results.length" class="results">
         <div class="results-title">
@@ -76,16 +71,14 @@
         </ul>
       </div>
 
-      <n-card v-if="pack" size="small" class="pack-info" :title="pack.name">
-        <template #header>
-          <div class="pack-head">
-            <span>{{ pack.name }}</span>
-            <n-tag :bordered="false" size="small" :type="pack.type === 'Lore' ? 'info' : 'warning'">
-              {{ pack.type === "Lore" ? "学识包 Lore" : "囤积包 Hoard" }}
-            </n-tag>
-            <n-tag :bordered="false" size="small" :type="gradeType">{{ gradeLabel }}级</n-tag>
-          </div>
-        </template>
+      <div v-if="pack" class="cardbox pack-info">
+        <div class="pack-head">
+          <span>{{ pack.name }}</span>
+          <span class="tag" :class="pack.type === 'Lore' ? 'tag-info' : 'tag-warning'">
+            {{ pack.type === "Lore" ? "学识包 Lore" : "囤积包 Hoard" }}
+          </span>
+          <span class="tag" :class="'tag-' + gradeType">{{ gradeLabel }}级</span>
+        </div>
         <div class="pack-desc">{{ pack.desc }}</div>
         <div class="item-preview">
           <div
@@ -99,7 +92,7 @@
             <span class="preview-rare">{{ rarityLabel(item.rarity) }}</span>
           </div>
         </div>
-      </n-card>
+      </div>
 
       <div v-if="pack" class="bag">
         <h4>本包背包（独特物品集齐进度）</h4>
@@ -115,31 +108,16 @@
         </div>
       </div>
     </div>
-  </n-config-provider>
 </template>
 
 <script>
-import {
-  NButton,
-  NCard,
-  NConfigProvider,
-  NSelect,
-  NTag,
-  darkTheme,
-} from "naive-ui";
 import source from "./packs.json";
 
 const KEY = "subata_pack_sim";
 
 export default {
   name: "PackSimulator",
-  components: {
-    NButton,
-    NCard,
-    NConfigProvider,
-    NSelect,
-    NTag,
-  },
+  components: {},
   data() {
     const hasStorage = typeof localStorage !== "undefined";
     let saved = null;
@@ -164,9 +142,6 @@ export default {
   computed: {
     pack() {
       return this.packs.find((p) => p.key === this.packKey) || this.packs[0];
-    },
-    packOptions() {
-      return this.packs.map((p) => ({ label: p.name, value: p.key }));
     },
     gradeType() {
       const g = this.pack.grade;
@@ -402,13 +377,85 @@ export default {
 }
 .pack-select {
   width: 340px;
+  padding: 4px 8px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+}
+.btn {
+  padding: 0 18px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn.primary {
+  background: #18a058;
+  color: #fff;
+}
+.btn.primary:hover {
+  opacity: 0.9;
+}
+.btn.primary:disabled,
+.btn.primary[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.link-btn {
+  border: none;
+  background: none;
+  color: #888;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+.link-btn:hover {
+  color: #18a058;
+  text-decoration: underline;
 }
 .bulk-tip {
   font-size: 12px;
   color: #999;
 }
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: 12px;
+  border: 1px solid;
+}
+.tag-info {
+  color: #2080f0;
+  border-color: #2080f0;
+  background: #2080f014;
+}
+.tag-warning {
+  color: #f0a020;
+  border-color: #f0a020;
+  background: #f0a02014;
+}
+.tag-success {
+  color: #18a058;
+  border-color: #18a058;
+  background: #18a05814;
+}
+.tag-error {
+  color: #d03050;
+  border-color: #d03050;
+  background: #d0305014;
+}
 .pack-info {
   margin-bottom: 14px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 12px 16px;
+  background: var(--vp-c-bg);
 }
 .pack-head {
   display: flex;
