@@ -4,3 +4,4 @@ author: 蓝色灭火器
 order: 3
 ---
 <Canculate />
+<Share colorful />
