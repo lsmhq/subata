@@ -650,4 +650,56 @@ export default {
   font-size: 13px;
   color: var(--vp-c-text-2);
 }
+
+@media (max-width: 768px) {
+  .kw {
+    width: 100%;
+  }
+  .toolbar {
+    align-items: stretch;
+  }
+  .filters {
+    padding: 6px 8px;
+  }
+  .fgroup {
+    align-items: flex-start;
+  }
+  .fgroup.level {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .level-bar {
+    min-width: 0;
+    width: 100%;
+  }
+  .level-bar input[type="range"] {
+    min-width: 40px;
+  }
+  .item-head {
+    gap: 4px;
+    padding: 8px;
+  }
+  .item-name {
+    font-size: 13px;
+  }
+  .school-tag,
+  .type-tag,
+  .lv-tag,
+  .flag-tag {
+    font-size: 11px;
+    padding: 0 6px;
+  }
+  .item-arrow {
+    font-size: 11px;
+  }
+  .item-detail {
+    padding: 8px;
+  }
+  .stat-list {
+    font-size: 12px;
+  }
+  .pager {
+    gap: 8px;
+  }
+}
 </style>

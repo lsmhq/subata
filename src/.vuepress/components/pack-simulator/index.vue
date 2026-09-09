@@ -15,15 +15,41 @@
 
       <div class="control">
         <n-select
+          class="pack-select"
           v-model:value="packKey"
           :options="packOptions"
           placeholder="选择一个卡包"
           size="small"
-          style="width: 340px"
         />
         <n-button type="primary" size="small" :disabled="crowns < pack.crowns" @click="openPack">
           开包（{{ pack.crowns }} 皇冠）
         </n-button>
+      </div>
+
+      <div v-if="results.length" class="results">
+        <div class="results-title">本次开包内容</div>
+        <div class="cards">
+          <div
+            v-for="(item, index) in results"
+            :key="index"
+            class="card"
+            :class="{ flipped: flipped[index], 'r-common': item.rarity === 'common', 'r-uncommon': item.rarity === 'uncommon', 'r-rare': item.rarity === 'rare', 'r-ultra-rare': item.rarity === 'ultra-rare', 'r-epic': item.rarity === 'epic' }"
+          >
+            <div class="card-inner">
+              <div class="face face-cover">
+                <span class="cover-mark">?</span>
+              </div>
+              <div class="face face-content">
+                <div class="content-name">{{ item.name }}</div>
+                <div class="content-tags">
+                  <span class="preview-type">{{ typeLabel(item.type) }}</span>
+                  <span class="content-rare">{{ rarityLabel(item.rarity) }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="results-note">官方卡包每包给出 7 件随机物品；掉率为社区按长期开包整理的估算，不代表官方数值。</div>
       </div>
 
       <div class="odds">
@@ -357,6 +383,9 @@ export default {
   gap: 12px;
   margin-bottom: 14px;
 }
+.pack-select {
+  width: 340px;
+}
 .pack-info {
   margin-bottom: 14px;
 }
@@ -617,5 +646,42 @@ export default {
 .bag-count.zero {
   color: #bbb;
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .pack-sim {
+    max-width: 100%;
+  }
+  .head {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .crowns .value {
+    font-size: 20px;
+  }
+  .control {
+    flex-wrap: wrap;
+  }
+  .pack-select {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+  .pack-head {
+    flex-wrap: wrap;
+  }
+  .preview-item {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+  }
+  .cards {
+    gap: 8px;
+  }
+  .card {
+    width: calc(33.333% - 6px);
+    height: 128px;
+  }
+  .odds {
+    padding: 8px 10px;
+  }
 }
 </style>
