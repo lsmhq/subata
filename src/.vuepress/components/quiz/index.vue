@@ -1,5 +1,6 @@
 <template>
-  <n-config-provider :theme="dark ? darkTheme : null">
+  <div class="quiz-wrap">
+    <n-config-provider v-if="quizReady" :theme="dark ? darkTheme : null">
     <div class="quiz">
       <n-tabs v-model:value="tab" type="line" animated>
         <n-tab-pane name="bank" tab="题库对照">
@@ -66,6 +67,7 @@
       </n-tabs>
     </div>
   </n-config-provider>
+  </div>
 </template>
 
 <script>
@@ -253,6 +255,7 @@ export default {
       randomItem: null,
       copied: false,
       dark: false,
+      quizReady: false,
       questions,
     };
   },
@@ -314,6 +317,7 @@ export default {
     },
   },
   mounted() {
+    this.quizReady = true;
     if (typeof document !== "undefined") {
       this._observer = new MutationObserver(() => {
         this.dark = document.documentElement.classList.contains("dark");

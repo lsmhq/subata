@@ -2,8 +2,6 @@ import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import theme from "./theme.js";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
-import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
-import path from "path";
 export default defineUserConfig({
   
   base: "/subata/",
@@ -54,16 +52,6 @@ export default defineUserConfig({
         },
       ],
     }),
-    registerComponentsPlugin({
-      components: {
-        Icon: path.resolve(__dirname, "./components/Icon/index.vue"),
-        Button: path.resolve(__dirname, "./components/Button/index.vue"),
-        Card: path.resolve(__dirname, "./components/Card/index.vue"),
-        Canculate: path.resolve(__dirname, "./components/canculate/index.vue"),
-        PopOver: path.resolve(__dirname, "./components/popover/index.vue"),
-        Update: path.resolve(__dirname, "./components/update/index.vue"),
-      }
-    })
   ]
   // Enable it with pwa
   // shouldPrefetch: false,

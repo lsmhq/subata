@@ -27,13 +27,13 @@ timeline: true
 ::: tabs
 
 @tab:active windows
-<ClientOnly><Button secTitle="win32" href="http://101.43.174.221:3001/file/subataUpdate/Subata%20Setup%202.4.2.exe">windows10/11</Button></ClientOnly>
+<Button secTitle="win32" href="http://101.43.174.221:3001/file/subataUpdate/Subata%20Setup%202.4.2.exe">windows10/11</Button>
 
-<ClientOnly><Button secTitle="win64" href="http://101.43.174.221:3001/file/subatax64/Subata%20Setup%202.4.2.exe">windows10/11</Button></ClientOnly>
+<Button secTitle="win64" href="http://101.43.174.221:3001/file/subatax64/Subata%20Setup%202.4.2.exe">windows10/11</Button>
 
-<ClientOnly><Button secTitle="暂不支持" href="">windows7</Button></ClientOnly>
+<Button secTitle="暂不支持" href="">windows7</Button>
 @tab Mac
-<ClientOnly><Button disable="{{true}}">暂不支持</Button></ClientOnly>
+<Button disable="{{true}}">暂不支持</Button>
 :::
 
 [如何安装？](/subatamd/introduction.md)

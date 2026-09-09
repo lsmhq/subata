@@ -5,4 +5,4 @@ order: 3
 icon: sun
 ---
 
-<ClientOnly><Update /></ClientOnly>
+<Update />
