@@ -95,6 +95,11 @@ export default navbar([
                 text: '卡包抽卡',
                 link: '/subata-tools/index5',
                 icon: 'box-open'
+            },
+            {
+                text: '物品图鉴',
+                link: '/subata-tools/index6',
+                icon: 'book-open'
             }
         ]
     },

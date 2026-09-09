@@ -62,6 +62,7 @@ export default defineUserConfig({
         Canculate: path.resolve(__dirname, "./components/canculate/index.vue"),
         Quiz: path.resolve(__dirname, "./components/quiz/index.vue"),
         PackSimulator: path.resolve(__dirname, "./components/pack-simulator/index.vue"),
+        ItemsDb: path.resolve(__dirname, "./components/items-db/index.vue"),
         PopOver: path.resolve(__dirname, "./components/popover/index.vue"),
         Update: path.resolve(__dirname, "./components/update/index.vue"),
       }
