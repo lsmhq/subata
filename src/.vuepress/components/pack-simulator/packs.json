@@ -1,0 +1,747 @@
+{
+  "rarityWeights": {
+    "common": 40,
+    "uncommon": 30,
+    "rare": 15,
+    "ultra-rare": 10,
+    "epic": 5
+  },
+  "packs": [
+    {
+      "key": "professors-hoard",
+      "name": "Professor's Hoard Pack 教授包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "A",
+      "desc": "装备 0-150 级，双学院属性且每件带独立卡片；150 级法杖自带 0 豆群体陷阱，是毕业级轻奢法杖。",
+      "items": [
+        {
+          "name": "点燃帽（火系·0豆点火翻倍）",
+          "type": "equip",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "群伪装帽（亡灵·全体伪装）",
+          "type": "equip",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "轻奢法杖·0豆群体陷阱",
+          "type": "equip",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "各系技能特效坐骑（永久）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "各系技能特效坐骑（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "各系技能特效坐骑（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "night-mire-hoard",
+      "name": "Night Mire Hoard Pack 暗夜泥沼包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "A",
+      "desc": "出全系别所有部位装备（头/身/脚/法杖/项链/护符/戒指/卡盒），衣服是万古平替，卡盒带基础彩豆率。",
+      "items": [
+        {
+          "name": "万古平替衣·高穿刺高血量",
+          "type": "equip",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "万古平替防具",
+          "type": "equip",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "万古平替格挡鞋",
+          "type": "equip",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "方孔卡盒·基础彩豆率",
+          "type": "equip",
+          "rarity": "ultra-rare",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "primeval-hoard",
+      "name": "Primeval Hoard Pack 远古包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "A",
+      "desc": "掉落游戏最高攻击套装加成（+4 起步，火焰系最高 +8），由宠物+坐骑两件套触发。",
+      "items": [
+        {
+          "name": "远古套装·火焰8攻",
+          "type": "equip",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "远古套装·攻加成",
+          "type": "equip",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "小恐龙宠物（火系）",
+          "type": "pet",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "小恐龙宠物（风暴系）",
+          "type": "pet",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "小恐龙宠物（神圣系）",
+          "type": "pet",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "配对小恐龙坐骑",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "heroes-of-lemuria",
+      "name": "Heroes of Lemuria Pack 莱姆瑞亚英雄包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "A",
+      "desc": "全游戏最好的卡包能量装，头/身/鞋/武器四件套合计 96 能量，练宠园艺达人首选。",
+      "items": [
+        {
+          "name": "能量四件套·合计96能量",
+          "type": "equip",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "背部火箭坐骑（永久）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "背部火箭坐骑（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "背部火箭坐骑（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "knights-spellment",
+      "name": "Knight's Spellment Pack 骑士技能碎片包",
+      "crowns": 399,
+      "type": "Lore",
+      "grade": "B",
+      "desc": "目前 T0 的辅助头装备，卡片为回燃（火焰 X 豆转 X 陷阱）；碎片有鹿骑士、风暴 3+学院豆等。",
+      "items": [
+        {
+          "name": "回燃辅助头·T0",
+          "type": "equip",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "亡灵鹿骑士技能碎片",
+          "type": "spellment",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "风暴3+学院豆Catalán技能碎片",
+          "type": "spellment",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "冰霜输出+降命中技能碎片",
+          "type": "spellment",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "装备外观",
+          "type": "appearance",
+          "rarity": "uncommon",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "celestian-spellment",
+      "name": "Celestian Spellment Pack 星界技能碎片包",
+      "crowns": 399,
+      "type": "Lore",
+      "grade": "B",
+      "desc": "内含四个技能，其中亡灵 2+1 学院豆群体吸血最值得抽，碎片可通过共享银行转移。",
+      "items": [
+        {
+          "name": "亡灵2+1学院豆群吸技能碎片",
+          "type": "spellment",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "星界技能碎片（随机）",
+          "type": "spellment",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "装备外观",
+          "type": "appearance",
+          "rarity": "uncommon",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "grizzleheim-lore",
+      "name": "Grizzleheim Lore Pack 灰熊山林学识包",
+      "crowns": 399,
+      "type": "Lore",
+      "grade": "B",
+      "desc": "生命系低豆群攻的福音，小松鼠只需 2 豆+1 生命彩豆即可用，造成 310-340 群伤。",
+      "items": [
+        {
+          "name": "生命小松鼠技能碎片",
+          "type": "spellment",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "风暴雷神之锤技能碎片",
+          "type": "spellment",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "神圣3+1豆单奶技能碎片",
+          "type": "spellment",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "装备外观",
+          "type": "appearance",
+          "rarity": "uncommon",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "novus-explorers",
+      "name": "Novus Explorer's Pack 诺沃斯探索者包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "B",
+      "desc": "装备属性与万古对应的永恒装备一模一样（重血防格挡、无穿刺），零坐牢兑换万古的备选。",
+      "items": [
+        {
+          "name": "永恒平替装备·血防格挡",
+          "type": "equip",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "永恒平替武器",
+          "type": "equip",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "长腿探险家坐骑（永久）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "长腿探险家坐骑（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "长腿探险家坐骑（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "marleybone-motorist",
+      "name": "Marleybone Motorist Hoard Pack 马利伯恩摩托包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "B",
+      "desc": "目前最优秀的血防格挡装，适合堆耐久的辅助；掉落三只飞飞鱼宠物，冰系带两张冰场地卡适合 PVP。",
+      "items": [
+        {
+          "name": "血防格挡套（辅助毕业）",
+          "type": "equip",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "冰系飞飞鱼宠物·冰场地卡",
+          "type": "pet",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "飞飞鱼宠物（随机）",
+          "type": "pet",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "摩托坐骑（永久）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "ravenwood-rangers",
+      "name": "Ravenwood Rangers Lore Pack 拉文霍德游侠包",
+      "crowns": 399,
+      "type": "Lore",
+      "grade": "B",
+      "desc": "主打营地小偷、飞溅夸克、熊熊惊喜三个技能，熊熊惊喜是风暴系输出+回血的单挑神技。",
+      "items": [
+        {
+          "name": "熊熊惊喜技能碎片·风暴",
+          "type": "spellment",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "营地小偷技能碎片",
+          "type": "spellment",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "飞溅夸克技能碎片",
+          "type": "spellment",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "游侠罗盘武器·缝合外观",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "装备外观",
+          "type": "appearance",
+          "rarity": "uncommon",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "ghultures-hoard",
+      "name": "Ghulture's Hoard Pack 秃鹫包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "C",
+      "desc": "坐骑无需套装单件即可提供加成（平衡+2 通用，其他系别一律+3），但已被远古包上位替代。",
+      "items": [
+        {
+          "name": "秃鹫坐骑（永久·系别加成）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "秃鹫坐骑（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "秃鹫坐骑（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        },
+        {
+          "name": "装备外观",
+          "type": "appearance",
+          "rarity": "uncommon",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "druids-hoard",
+      "name": "Druid's Hoard Pack 德鲁伊包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "C",
+      "desc": "装备属性平平但缝合风格独特，坐骑是可爱的獾。",
+      "items": [
+        {
+          "name": "德鲁伊缝合外观",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "装备（一般属性）",
+          "type": "equip",
+          "rarity": "common",
+          "image": ""
+        },
+        {
+          "name": "獾坐骑（永久）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "獾坐骑（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "獾坐骑（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "spiral-villains",
+      "name": "Spiral Villain's Hoard Pack 反派包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "C",
+      "desc": "各类 COS 反派的缝合服装，可扮演蜘蛛祖父、摩根斯、马里斯泰尔，坐骑是帅气小火龙。",
+      "items": [
+        {
+          "name": "蜘蛛祖父缝合外观",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "摩根斯缝合外观",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "马里斯泰尔缝合外观",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "小火龙坐骑（永久）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "小火龙坐骑（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "小火龙坐骑（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "road-warrior",
+      "name": "Spellmental Road Warrior's Pack 公路恶霸包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "C",
+      "desc": "不错的缝合外观装、+50 移速的羊角恶魔摩托，以及好看的重金属骷髅法杖。",
+      "items": [
+        {
+          "name": "羊角恶魔摩托+50移速（永久）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "羊角恶魔摩托（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "羊角恶魔摩托（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        },
+        {
+          "name": "重金属骷髅法杖·外观",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "装备外观",
+          "type": "appearance",
+          "rarity": "uncommon",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "karamelle-souvenirs",
+      "name": "Karamelle Souvenirs Pack 焦糖城纪念品包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "C",
+      "desc": "背带裤缝合外观，以及和 $39 捆绑包同模的红甘草鞭，坐骑是三色软糖兔兔。",
+      "items": [
+        {
+          "name": "红甘草鞭·同模武器",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "背带裤缝合外观",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "软糖兔兔坐骑（永久）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "软糖兔兔坐骑（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "软糖兔兔坐骑（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "astrologers-hoard",
+      "name": "Astrologer's Hoard Pack 宇宙学家包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "C",
+      "desc": "宇宙学家缝合外观装备，以及三种颜色的 +50 移速火箭坐骑。",
+      "items": [
+        {
+          "name": "宇宙学家缝合外观",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "三色火箭坐骑+50移速（永久）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "火箭坐骑（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "火箭坐骑（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "sky-train-robbery",
+      "name": "Great Sky Train Robbery Pack 酷牧场主包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "C",
+      "desc": "牧场主缝合外观，少见的风衣，还有唯一带鞋钉的靴子；坐骑是三种眼睛颜色的犰狳。",
+      "items": [
+        {
+          "name": "风衣缝合外观·蓝大衣",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "鞋钉牧场主靴",
+          "type": "appearance",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "犰狳坐骑（永久·三色瞳）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "犰狳坐骑（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "犰狳坐骑（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "key": "pandamonium",
+      "name": "Pandamonium Hoard Pack 熊猫包",
+      "crowns": 399,
+      "type": "Hoard",
+      "grade": "C",
+      "desc": "可爱的熊猫耳朵发型、熊猫宠物与不同鞍具配色的熊猫坐骑，还有国风家园家具。",
+      "items": [
+        {
+          "name": "熊猫耳朵发型·可染色",
+          "type": "appearance",
+          "rarity": "ultra-rare",
+          "image": ""
+        },
+        {
+          "name": "熊猫宠物",
+          "type": "pet",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "熊猫坐骑（永久·鞍具配色）",
+          "type": "mount",
+          "rarity": "epic",
+          "image": ""
+        },
+        {
+          "name": "熊猫坐骑（7天）",
+          "type": "mount",
+          "rarity": "rare",
+          "image": ""
+        },
+        {
+          "name": "熊猫坐骑（1天）",
+          "type": "mount",
+          "rarity": "common",
+          "image": ""
+        },
+        {
+          "name": "国风家园家具",
+          "type": "furniture",
+          "rarity": "common",
+          "image": ""
+        }
+      ]
+    }
+  ],
+  "perPack": 7,
+  "basics": {
+    "elixirs": [
+      "宠物经验药水",
+      "通用经验药水",
+      "金币加成药水",
+      "能量恢复药水",
+      "快速园艺药水",
+      "快速采矿药水"
+    ],
+    "snacks": [
+      "金色棒棒糖",
+      "岩砂糖",
+      "星光棒棒糖",
+      "香辣泡泡糖",
+      "软糖火猫",
+      "奶酪",
+      "魔力饼干",
+      "丰收玉米",
+      "硬糖"
+    ],
+    "cards": [
+      "灵猴卡 Imp",
+      "妖精卡 Pixie",
+      "僵尸卡 Ghoul",
+      "太阳鸟卡 Sunbird",
+      "暴风雪卡 Blizzard",
+      "独眼巨人卡 Cyclops",
+      "审判卡 Judgement",
+      "火猫卡 Fire Cat"
+    ],
+    "housing": [
+      "古老书架",
+      "壁炉",
+      "烛台",
+      "挂毯",
+      "雕像",
+      "盆栽"
+    ]
+  }
+}
