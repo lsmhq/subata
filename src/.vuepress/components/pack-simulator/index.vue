@@ -17,16 +17,16 @@
         <option v-for="p in packs" :key="p.key" :value="p.key">{{ p.name }}</option>
       </select>
       <template v-if="bulkTotal">
-        <button class="btn primary" @click="nextBulk">
+        <button class="btn primary" :disabled="flipping" @click="nextBulk">
           下一包（剩 {{ bulkLeft }} 包）
         </button>
         <span class="bulk-tip">十连开包中，皇冠已一次性扣除，点「下一包」逐包揭晓</span>
       </template>
       <template v-else>
-        <button class="btn primary" :disabled="crowns < pack.crowns" @click="openPack">
+        <button class="btn primary" :disabled="flipping || crowns < pack.crowns" @click="openPack">
           开包（{{ pack.crowns }} 皇冠）
         </button>
-        <button class="btn primary" :disabled="crowns < pack.crowns * 10" @click="open10">
+        <button class="btn primary" :disabled="flipping || crowns < pack.crowns * 10" @click="open10">
           开10包（{{ pack.crowns * 10 }} 皇冠）
         </button>
       </template>
@@ -136,6 +136,7 @@ export default {
       bulkLeft: saved && typeof saved.bulkLeft === "number" ? saved.bulkLeft : 0,
       results: [],
       flipped: [],
+      flipping: false,
       dark: false,
     };
   },
@@ -252,11 +253,11 @@ export default {
       return { results: [...misc, ...specials], specials };
     },
     openPack() {
-      if (this.bulkTotal) return;
+      if (this.bulkTotal || this.flipping) return;
       this.applyRoll();
     },
     open10() {
-      if (this.bulkTotal) return;
+      if (this.bulkTotal || this.flipping) return;
       const cost = this.pack.crowns * 10;
       if (this.crowns < cost) return;
       this.crowns -= cost;
@@ -265,6 +266,7 @@ export default {
       this.nextBulk();
     },
     nextBulk() {
+      if (this.flipping) return;
       if (this.bulkLeft <= 0) {
         this.bulkTotal = 0;
         return;
@@ -288,17 +290,16 @@ export default {
       this.persist();
 
       this.$nextTick(() => {
-        const timers = [];
+        this.flipping = true;
+        const last = results.length - 1;
         results.forEach((_, i) => {
-          timers.push(
-            setTimeout(() => {
-              const next = this.flipped.slice();
-              next[i] = true;
-              this.flipped = next;
-            }, 360 + i * 320)
-          );
+          setTimeout(() => {
+            const next = this.flipped.slice();
+            next[i] = true;
+            this.flipped = next;
+            if (i === last) this.flipping = false;
+          }, 360 + i * 320);
         });
-        this._flipTimers = timers;
       });
     },
     reset() {
@@ -307,12 +308,9 @@ export default {
       this.bag = {};
       this.bulkTotal = 0;
       this.bulkLeft = 0;
+      this.flipping = false;
       this.results = [];
       this.flipped = [];
-      if (this._flipTimers) {
-        this._flipTimers.forEach((t) => clearTimeout(t));
-        this._flipTimers = null;
-      }
       this.persist();
     },
     persist() {
