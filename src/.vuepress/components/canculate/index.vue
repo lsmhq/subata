@@ -2,8 +2,8 @@
   <n-config-provider :theme="dark ? darkTheme : null">
     <div class="canculate">
       <div class="tofixed-group">
-        <span>小数位数</span>
-        <n-button size="small" quaternary circle @click="changeFixed(-1)">−</n-button>
+        <span>小数</span>
+        <!-- <n-button size="small" quaternary circle @click="changeFixed(-1)">−</n-button> -->
         <n-input-number
           class="tofixed-input"
           v-model:value="toFixed"
@@ -11,7 +11,7 @@
           :max="5"
           size="small"
         />
-        <n-button size="small" quaternary circle @click="changeFixed(1)">＋</n-button>
+        <!-- <n-button size="small" quaternary circle @click="changeFixed(1)">＋</n-button> -->
       </div>
 
       <div class="attr-list">
@@ -262,7 +262,8 @@ export default {
     font-size: 14px;
 
     .tofixed-input {
-      width: 90px;
+      width: 108px;
+      margin-left: 34px;
     }
   }
 
