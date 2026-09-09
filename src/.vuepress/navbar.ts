@@ -78,6 +78,16 @@ export default navbar([
             }
         ]
     },
+    {
+        text: '网站工具',
+        children:[
+            {
+                text: '宠物计算器',
+                link: '/tools/index3',
+                icon: 'calculator'
+            }
+        ]
+    },
     // {
     //     text: '商城',
     //     children:[

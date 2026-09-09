@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@vuepress/plugin-register-components": "2.0.0-rc.134",
+    "naive-ui": "^2.45.3",
     "path": "^0.12.7",
     "vuepress-plugin-components": "2.0.0-rc.109"
   }

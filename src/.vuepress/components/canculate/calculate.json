@@ -1,0 +1,459 @@
+{
+    "data": [
+        {
+            "name": "Strength",
+            "zh_name": "力量",
+            "max": 400,
+            "min": 1
+        },
+        {
+            "name": "Intellect",
+            "zh_name": "智力",
+            "max": 400,
+            "min": 1
+        },
+        {
+            "name": "Agility",
+            "zh_name": "敏捷性",
+            "max": 400,
+            "min": 1
+        },
+        {
+            "name": "Will",
+            "zh_name": "意志",
+            "max": 400,
+            "min": 1
+        },
+        {
+            "name": "Power",
+            "zh_name": "能量",
+            "max": 400,
+            "min": 1
+        }
+    ],
+    "data_right": [
+        {
+            "type": "防御",
+            "icon": "Type_Resist",
+            "unit": "%",
+            "children": [
+                {
+                    "zh_name": "2豆防",
+                    "name": "Spell-Defying",
+                    "gs": "(2*Strength + 2*Agility + Power)*/250",
+                    "type": 1,
+                    "de": 250,
+                    "x": 0,
+                    "y": 2,
+                    "z": 4,
+                    "idx": 0
+                },
+                {
+                    "zh_name": "4豆防",
+                    "name": "Spell-Proof",
+                    "gs": "(2*Strength + 2*Agility + Power)/125",
+                    "type": 1,
+                    "de": 125,
+                    "x": 0,
+                    "y": 2,
+                    "z": 4,
+                    "idx": 1
+                },{
+                    "zh_name": "Resistance-wand",
+                    "name": "Resistance-wand",
+                    "gs": "2*Strength + 2*Agility + Power)*3/250",
+                    "type": 1,
+                    "de": 83.33333333333333,
+                    "x": 0,
+                    "y": 2,
+                    "z": 4,
+                    "idx": 0
+                }
+            ]
+        },
+        {
+            "type": "攻击力",
+            "icon": "Type_Damage",
+            "unit": "%",
+            "children": [
+                {
+                    "name": "Any-Dealer/Bringer",
+                    "zh_name": "Any-Dealer/Bringer",
+                    "gs": "(2*Strength + 2*Will + Power)*3/400",
+                    "type": 2,
+                    "de": 400,
+                    "x": 0,
+                    "y": 3,
+                    "z": 4,
+                    "idx": 2
+                },
+                {
+                    "name": "Any-Giver/Pain-Giver",
+                    "zh_name": "Any-Giver/Pain-Giver",
+                    "gs": "(2*Strength + 2*Will + Power)/200",
+                    "type": 1,
+                    "de": 200,
+                    "x": 0,
+                    "y": 3,
+                    "z": 4,
+                    "idx": 3
+                },
+                {
+                    "name": "Any-Boon (Pain-Bringer)",
+                    "zh_name": "Any-Boon (Pain-Bringer)",
+                    "gs": "(2*Strength + 2*Will + Power)/400",
+                    "type": 1,
+                    "de": 400,
+                    "x": 0,
+                    "y": 3,
+                    "z": 4,
+                    "idx": 4
+                }
+            ]
+        },
+        {
+            "type": "命中率",
+            "icon": "Icon_Accuracy",
+            "unit": "%",
+            "children": [
+                {
+                    "name": "Any-Sniper",
+                    "zh_name": "Any-Sniper",
+                    "gs": "(2*Intellect + 2*Agility + Power)*3/400",
+                    "type": 2,
+                    "de": 400,
+                    "x": 1,
+                    "y": 2,
+                    "z": 4,
+                    "idx": 5
+                },
+                {
+                    "name": "Any-Shot",
+                    "zh_name": "Any-Shot",
+                    "gs": "(2*Intellect + 2*Agility + Power)/200",
+                    "type": 1,
+                    "de": 200,
+                    "x": 1,
+                    "y": 2,
+                    "z": 4,
+                    "idx": 6
+                },
+                {
+                    "name": "Any-Eye",
+                    "zh_name": "Any-Eye",
+                    "gs": "(2*Intellect + 2*Agility + Power)/400",
+                    "type": 1,
+                    "de": 400,
+                    "x": 1,
+                    "y": 2,
+                    "z": 4,
+                    "idx": 7
+                }
+            ]
+        },{
+            "type": "暴击格挡",
+            "icon": "Icon_BlockRating",
+            "unit": "",
+            "children": [
+                {
+                    "name": "Defender",
+                    "zh_name": "Defender",
+                    "gs": "(24/1000)*(2*Intellect + 2*Will + Power)",
+                    "type": 2,
+                    "de": 125,
+                    "x": 1,
+                    "y": 3,
+                    "z": 4
+                },
+                {
+                    "name": "Blocker",
+                    "zh_name": "Blocker",
+                    "gs": "(18/1000)*(2*Intellect + 2*Will + Power)",
+                    "type": 3,
+                    "de": 500,
+                    "x": 1,
+                    "y": 3,
+                    "z": 4
+                }
+            ]
+        },{
+            "type": "眩晕格挡",
+            "icon": "Type_Stun_Resist",
+            "unit": "%",
+            "children": [
+                {
+                    "name": "Stun Recalcitrant",
+                    "zh_name": "Stun Recalcitrant",
+                    "gs": "(2*Strength + 2*Intellect + Power)/125",
+                    "type": 1,
+                    "de": 125,
+                    "x": 0,
+                    "y": 1,
+                    "z": 4,
+                    "idx": 16
+                },
+                {
+                    "name": "Stun Resistant",
+                    "zh_name": "Stun Resistant",
+                    "gs": "(2*Strength + 2*Intellect + Power)/250",
+                    "type": 1,
+                    "de": 250,
+                    "x": 0,
+                    "y": 1,
+                    "z": 4,
+                    "idx": 17
+                }
+            ]
+        },
+        {
+            "type": "穿刺率",
+            "icon": "Icon_Armor_Penetration",
+            "unit": "%",
+            "children": [
+                {
+                    "name": "Armor Breaker",
+                    "zh_name": "Armor Breaker",
+                    "gs": "(2*Strength + 2*Agility + Power)/400",
+                    "type": 1,
+                    "de": 400,
+                    "x": 0,
+                    "y": 2,
+                    "z": 4,
+                    "idx": 11
+                },
+                {
+                    "name": "Armor Piercer",
+                    "zh_name": "Armor Piercer",
+                    "gs": "(2*Strength + 2*Agility + Power)*(3/2000)",
+                    "type": 2,
+                    "de": 2000,
+                    "x": 0,
+                    "y": 2,
+                    "z": 4,
+                    "idx": 12
+                }
+            ]
+        },
+        {
+            "type": "治疗",
+            "unit": "%",
+            "children": [
+                {
+                    "name": "Healer",
+                    "zh_name": "Healer",
+                    "gs": "(6/2000)*(2*Strength + 2*Will + Power)",
+                    "type": 2,
+                    "de": 1000,
+                    "x": 0,
+                    "y": 3,
+                    "z": 4,
+                    "icon": ["Type_Heal", "Type_Outgoing"]
+                },
+                {
+                    "name": "MEDIC",
+                    "zh_name": "MEDIC",
+                    "gs": "(13/2000)*(2*Strength + 2*Will + Power)",
+                    "type": 1,
+                    "de": 153.8461538461538,
+                    "x": 0,
+                    "y": 3,
+                    "z": 4,
+                    "icon": ["Type_Heal", "Type_Outgoing"]
+                },
+                {
+                    "name": "HealThy",
+                    "zh_name": "HealThy",
+                    "gs": "(6/2000)*(2*Strength + 2*Agility + Power)",
+                    "type": 2,
+                    "de": 1000,
+                    "x": 0,
+                    "y": 2,
+                    "z": 4,
+                    "icon": ["Type_Heal", "Type_Incoming"]
+                },
+                {
+                    "name": "Lively",
+                    "zh_name": "Lively",
+                    "gs": "(13/2000)*(2*Strength + 2*Agility + Power)",
+                    "type": 1,
+                    "de": 153.8461538461538,
+                    "x": 0,
+                    "y": 2,
+                    "z": 4,
+                    "icon": ["Type_Heal", "Type_Incoming"]
+                }
+            ]
+        },
+        {
+            "type": "血量",
+            "icon": "",
+            "unit": "",
+            "children": [
+                {
+                    "name": "Add Health",
+                    "zh_name": "Add Health",
+                    "gs": "2*Agility + 2*Will + Power)*(3/50)",
+                    "type": 2,
+                    "de": 50,
+                    "x": 2,
+                    "y": 3,
+                    "z": 4,
+                    "idx": 13,
+                    "icon": "Type_MaxHealth"
+                },
+                {
+                    "name": "Health Boost",
+                    "zh_name": "Health Boost",
+                    "gs": "2*Agility + 2*Will + Power)/12.5",
+                    "type": 1,
+                    "de": 12.5,
+                    "x": 2,
+                    "y": 3,
+                    "z": 4,
+                    "icon": "Type_MaxHealth"
+                },
+                {
+                    "name": "Health Gift",
+                    "zh_name": "Health Gift",
+                    "gs": "2*Agility + 2*Will + Power)/(10)",
+                    "type": 1,
+                    "de": 10,
+                    "x": 2,
+                    "y": 3,
+                    "z": 4,
+                    "icon": "Type_MaxHealth"
+                },
+                {
+                    "name": "Health Bounty",
+                    "zh_name": "Health Bounty",
+                    "gs": "2*Agility + 2*Will + Power)*(3/25)",
+                    "type": 2,
+                    "de": 25,
+                    "x": 2,
+                    "y": 3,
+                    "z": 4,
+                    "idx": 13,
+                    "icon": "Type_MaxHealth"
+                }
+            ]
+        },{
+            "type":"法力值",
+            "icon":"",
+            "unit":"",
+            "children":[
+                {
+                    "name": "Extra Mana",
+                    "zh_name": "Extra Mana",
+                    "gs": "(2*Intellect + 2*Will + Power)/25",
+                    "type": 1,
+                    "de": 25,
+                    "x": 1,
+                    "y": 3,
+                    "z": 4,
+                    "icon": "Type_MaxMana"
+                },
+                {
+                    "name": "Mana Boost",
+                    "zh_name": "Mana Boost",
+                    "gs": "(2*Intellect + 2*Will + Power)*(3/50)",
+                    "type": 2,
+                    "de": 50,
+                    "x": 1,
+                    "y": 3,
+                    "z": 4,
+                    "icon": "Type_MaxMana"
+                },
+                {
+                    "name": "Extra Gift",
+                    "zh_name": "Extra Gift",
+                    "gs": "(2*Intellect + 2*Will + Power)*(3 / 37.5)",
+                    "type": 2,
+                    "de": 37.5,
+                    "x": 1,
+                    "y": 3,
+                    "z": 4,
+                    "icon": "Type_MaxMana"
+                },
+                {
+                    "name": "Mana Bounty",
+                    "zh_name": "Mana Bounty",
+                    "gs": "(2*Intellect + 2*Will + Power) / 10",
+                    "type": 1,
+                    "de": 10,
+                    "x": 1,
+                    "y": 3,
+                    "z": 4,
+                    "icon": "Type_MaxMana"
+                }
+            ]
+        },        {
+            "type": "暴击值",
+            "icon": "Icon_CriticalRating",
+            "unit": "",
+            "children": [
+                {
+                    "name": "XXX Critical Assailant",
+                    "zh_name": "Critical Assailant",
+                    "gs": "(2*Agility + 2*Will + Power)/40",
+                    "type": 1,
+                    "de": 40,
+                    "x": 2,
+                    "y": 3,
+                    "z": 4,
+                    "idx": 8
+                },
+                {
+                    "name": "XXX Critical Striker",
+                    "zh_name": " Critical Striker",
+                    "gs": "(2*Agility + 2*Will + Power)/50",
+                    "type": 1,
+                    "de": 50,
+                    "x": 2,
+                    "y": 3,
+                    "z": 4,
+                    "idx": 8
+                },
+                {
+                    "name": "Critical Hitter",
+                    "zh_name": "Critical Hitter",
+                    "gs": "(2*Agility + 2*Will + Power)*9/500",
+                    "type": 3,
+                    "de": 500,
+                    "x": 2,
+                    "y": 3,
+                    "z": 4,
+                    "idx": 9
+                },
+                {
+                    "name": "Critical Striker",
+                    "zh_name": "Critical Striker",
+                    "gs": "(2*Agility + 2*Will + Power)*3/125",
+                    "type": 2,
+                    "de": 125,
+                    "x": 2,
+                    "y": 3,
+                    "z": 4,
+                    "idx": 10
+                }
+            ]
+        },
+        {
+            "type": "超级魔豆",
+            "icon": "Type_PowerPips",
+            "unit": "%",
+            "children": [
+                {
+                    "name": "Pip O’Plenty",
+                    "zh_name": "Pip O’Plenty",
+                    "gs": "(2*Strength + 2*Intellect + Power)/250",
+                    "type": 1,
+                    "de": 250,
+                    "x": 0,
+                    "y": 1,
+                    "z": 4,
+                    "idx": 15
+                }
+            ]
+        }
+    ]
+}
