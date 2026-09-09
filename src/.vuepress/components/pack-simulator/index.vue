@@ -18,9 +18,9 @@
       </select>
       <template v-if="bulkTotal">
         <button class="btn primary" :disabled="flipping" @click="nextBulk">
-          下一包（剩 {{ bulkLeft }} 包）
+          下一包
         </button>
-        <span class="bulk-tip">十连开包中，皇冠已一次性扣除，点「下一包」逐包揭晓</span>
+        <span class="bulk-tip">十连开包中：已开 {{ bulkTotal - bulkLeft }} / {{ bulkTotal }}，剩 {{ bulkLeft }} 包</span>
       </template>
       <template v-else>
         <button class="btn primary" :disabled="flipping || crowns < pack.crowns" @click="openPack">
@@ -48,11 +48,13 @@
                 <span class="cover-mark">?</span>
               </div>
               <div class="face face-content">
-                <div class="content-name">{{ item.name }}</div>
-                <div class="content-tags">
-                  <span class="preview-type">{{ typeLabel(item.type) }}</span>
-                  <span class="content-rare">{{ rarityLabel(item.rarity) }}</span>
-                </div>
+                <template v-if="revealed[index]">
+                  <div class="content-name">{{ item.name }}</div>
+                  <div class="content-tags">
+                    <span class="preview-type">{{ typeLabel(item.type) }}</span>
+                    <span class="content-rare">{{ rarityLabel(item.rarity) }}</span>
+                  </div>
+                </template>
               </div>
             </div>
           </div>
@@ -136,6 +138,7 @@ export default {
       bulkLeft: saved && typeof saved.bulkLeft === "number" ? saved.bulkLeft : 0,
       results: [],
       flipped: [],
+      revealed: [],
       flipping: false,
       dark: false,
     };
@@ -158,6 +161,7 @@ export default {
     packKey() {
       this.results = [];
       this.flipped = [];
+      this.revealed = [];
       this.bulkTotal = 0;
       this.bulkLeft = 0;
     },
@@ -287,18 +291,28 @@ export default {
       this.total += 1;
       this.results = results;
       this.flipped = results.map(() => false);
+      this.revealed = results.map(() => false);
       this.persist();
 
       this.$nextTick(() => {
         this.flipping = true;
         const last = results.length - 1;
         results.forEach((_, i) => {
+          const t = 360 + i * 320;
           setTimeout(() => {
             const next = this.flipped.slice();
             next[i] = true;
             this.flipped = next;
-            if (i === last) this.flipping = false;
-          }, 360 + i * 320);
+          }, t);
+          setTimeout(() => {
+            const r = this.revealed.slice();
+            r[i] = true;
+            this.revealed = r;
+            if (i === last) {
+              this.flipping = false;
+              if (this.bulkLeft === 0) this.bulkTotal = 0;
+            }
+          }, t + 240);
         });
       });
     },
@@ -311,6 +325,7 @@ export default {
       this.flipping = false;
       this.results = [];
       this.flipped = [];
+      this.revealed = [];
       this.persist();
     },
     persist() {
@@ -608,6 +623,34 @@ export default {
   font-size: 34px;
   font-weight: 700;
   border: 2px solid #39455f;
+}
+.r-epic .face-cover {
+  border-color: #f0a020;
+  box-shadow: 0 0 18px rgba(240, 160, 32, 0.45);
+}
+.r-epic .cover-mark {
+  background: rgba(240, 160, 32, 0.45);
+}
+.r-ultra-rare .face-cover {
+  border-color: #9c27b0;
+  box-shadow: 0 0 14px rgba(156, 39, 176, 0.4);
+}
+.r-ultra-rare .cover-mark {
+  background: rgba(156, 39, 176, 0.4);
+}
+.r-rare .face-cover {
+  border-color: #2080f0;
+  box-shadow: 0 0 12px rgba(32, 128, 240, 0.35);
+}
+.r-rare .cover-mark {
+  background: rgba(32, 128, 240, 0.3);
+}
+.r-uncommon .face-cover {
+  border-color: #4caf50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+.r-uncommon .cover-mark {
+  background: rgba(76, 175, 80, 0.3);
 }
 .cover-mark {
   display: flex;
