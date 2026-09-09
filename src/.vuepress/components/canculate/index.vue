@@ -30,22 +30,14 @@
             :max="item.max"
             size="small"
           />
-          <n-dropdown
-            :options="minusOptions(index)"
-            trigger="contextmenu"
-            :show-arrow="false"
-            @select="onSelect($event)"
-          >
-            <n-button size="small" circle title="右键快速-25/-40/-65" @click="quick(index, -1)">−</n-button>
-          </n-dropdown>
-          <n-dropdown
-            :options="plusOptions(index)"
-            trigger="contextmenu"
-            :show-arrow="false"
-            @select="onSelect($event)"
-          >
-            <n-button size="small" circle title="右键快速+25/+40/+65" @click="quick(index, 1)">＋</n-button>
-          </n-dropdown>
+          <n-select
+            class="attr-gem"
+            size="small"
+            :value="gemSelect"
+            :options="gemOptions"
+            placeholder="宝石"
+            @update:value="onGem(index, $event)"
+          />
           <n-slider
             class="attr-range"
             v-model:value="attr[index]"
@@ -101,8 +93,8 @@ import {
   NButton,
   NCard,
   NConfigProvider,
-  NDropdown,
   NInputNumber,
+  NSelect,
   NSlider,
   NTooltip,
   darkTheme,
@@ -115,8 +107,8 @@ export default {
     NButton,
     NCard,
     NConfigProvider,
-    NDropdown,
     NInputNumber,
+    NSelect,
     NSlider,
     NTooltip,
   },
@@ -139,6 +131,13 @@ export default {
       data_right: calculate.data_right,
       attr,
       toFixed: 3,
+      gemSelect: null,
+      gemOptions: [
+        { label: "无", value: 0 },
+        { label: "+25", value: 25 },
+        { label: "+40", value: 40 },
+        { label: "+60", value: 60 },
+      ],
       storageKey: KEY,
       observer: null,
     };
@@ -164,23 +163,9 @@ export default {
       const keys = Array.isArray(key) ? key : [key];
       return keys.map((k) => this.iconUrl(k));
     },
-    minusOptions(index) {
-      return [-25, -40, -65].map((v) => ({
-        label: `${v}`,
-        key: `m-${index}-${v}`,
-        value: { index, delta: v },
-      }));
-    },
-    plusOptions(index) {
-      return [25, 40, 65].map((v) => ({
-        label: `+${v}`,
-        key: `p-${index}-${v}`,
-        value: { index, delta: v },
-      }));
-    },
-    onSelect(key, option) {
-      const { index, delta } = option.value || {};
-      if (typeof index === "number") this.quick(index, delta);
+    onGem(index, value) {
+      this.gemSelect = null;
+      if (value) this.quick(index, value);
     },
     quick(index, delta) {
       const value = Math.min(this.data[index].max, Math.max(0, this.attr[index] + delta));
@@ -287,6 +272,11 @@ export default {
 
     .attr-input {
       width: 110px;
+      flex: none;
+    }
+
+    .attr-gem {
+      width: 90px;
       flex: none;
     }
 
