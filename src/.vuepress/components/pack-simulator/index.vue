@@ -51,6 +51,17 @@
         </div>
       </n-card>
 
+      <div class="odds">
+        <div class="odds-title">卡包掉率参考（每包，社区估算）</div>
+        <ul class="odds-list">
+          <li><b>永久坐骑</b>（大奖）：约 <b>0.5%～1.5%</b>，平均 70–200 包出一只</li>
+          <li><b>卡包限定宠物</b>：约 <b>2%～4%</b></li>
+          <li><b>毕业套装单件</b>：约 <b>5%</b>，凑整套看运气、单件易重复</li>
+          <li><b>限时坐骑</b>（1天 / 7天）：约 <b>十几 %</b>，仅临时使用，非大奖</li>
+          <li><b>其余绝大多数</b>：零食、家具、宝藏卡、金币、普通饰品</li>
+        </ul>
+      </div>
+
       <div v-if="results.length" class="results">
         <div class="results-title">本次开包内容</div>
         <div class="cards">
@@ -74,7 +85,7 @@
             </div>
           </div>
         </div>
-        <div class="results-note">官方卡包每包给出 7 件随机物品；掉率档位参照官方稀有度标注整理，具体百分比为社区估算，不代表官方数值。</div>
+        <div class="results-note">官方卡包每包给出 7 件随机物品；掉率为社区按长期开包整理的估算，不代表官方数值。</div>
       </div>
 
       <div v-if="pack" class="bag">
@@ -188,12 +199,22 @@ export default {
     pickOne(arr) {
       return arr[Math.floor(Math.random() * arr.length)];
     },
-    pickUnique() {
-      const weights = source.rarityWeights;
+    categoryOf(it) {
+      if (it.type === "mount") {
+        if (/永久/.test(it.name) || it.rarity === "epic") return "mount_perm";
+        if (/天/.test(it.name)) return "mount_temp";
+        return "mount_perm";
+      }
+      if (it.type === "pet") return "pet";
+      if (it.rarity === "ultra-rare" || (it.type === "equip" && it.rarity === "rare")) return "topgear";
+      return "other";
+    },
+    weightedOther(list) {
+      const w = { rare: 3, uncommon: 2, common: 1 };
       const pool = [];
-      this.pack.items.forEach((item) => {
-        const w = weights[item.rarity] || 1;
-        for (let i = 0; i < w; i++) pool.push(item);
+      list.forEach((it) => {
+        const n = w[it.rarity] || 1;
+        for (let i = 0; i < n; i++) pool.push(it);
       });
       return pool[Math.floor(Math.random() * pool.length)];
     },
@@ -202,20 +223,45 @@ export default {
     },
     openPack() {
       if (this.crowns < this.pack.crowns) return;
-      const results = [];
-      results.push(this.newResult(this.pickOne(source.basics.elixirs), "elixir", "common", true));
-      results.push(this.newResult(this.pickOne(source.basics.snacks), "snack", "common", true));
-      results.push(this.newResult(this.pickOne(source.basics.snacks), "snack", "common", true));
-      results.push(this.newResult(this.pickOne(source.basics.snacks), "snack", "common", true));
-      results.push(this.newResult(this.pickOne(source.basics.cards), "card", "common", true));
+      const gates = [
+        ["mount_perm", 0.01],
+        ["pet", 0.03],
+        ["topgear", 0.05],
+        ["mount_temp", 0.13],
+      ];
+      const specials = [];
+      gates.forEach(([cat, p]) => {
+        if (Math.random() < p) {
+          const pool = this.pack.items.filter((it) => this.categoryOf(it) === cat);
+          if (pool.length) specials.push(pool[Math.floor(Math.random() * pool.length)]);
+        }
+      });
 
-      const u1 = this.pickUnique();
-      const u2 = this.pickUnique();
-      results.push(this.newResult(u1.name, u1.type, u1.rarity, false));
-      results.push(this.newResult(u2.name, u2.type, u2.rarity, false));
+      const basicPool = [
+        ...source.basics.elixirs.map((n) => ({ name: n, type: "elixir" })),
+        ...source.basics.snacks.map((n) => ({ name: n, type: "snack" })),
+        ...source.basics.cards.map((n) => ({ name: n, type: "card" })),
+        ...source.basics.housing.map((n) => ({ name: n, type: "housing" })),
+      ];
+      const others = this.pack.items.filter(
+        (it) => !["mount_perm", "mount_temp", "pet", "topgear"].includes(this.categoryOf(it))
+      );
+
+      const misc = [];
+      while (misc.length < 7 - specials.length) {
+        if (others.length && Math.random() < 0.2) {
+          const it = this.weightedOther(others);
+          misc.push(this.newResult(it.name, it.type, it.rarity, false));
+        } else {
+          const b = this.pickOne(basicPool);
+          misc.push(this.newResult(b.name, b.type, "common", true));
+        }
+      }
+
+      const results = [...misc, ...specials];
 
       const bag = { ...this.bag };
-      [u1, u2].forEach((it) => {
+      specials.forEach((it) => {
         const k = this.pack.key + "::" + it.name;
         bag[k] = (bag[k] || 0) + 1;
       });
@@ -393,6 +439,28 @@ export default {
 }
 .results {
   margin-bottom: 16px;
+}
+.odds {
+  border: 1px dashed #e2e5eb;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  background: rgba(128, 128, 128, 0.03);
+}
+.odds-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.odds-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #555;
+}
+.odds-list b {
+  color: #333;
 }
 .results-title {
   font-size: 14px;
