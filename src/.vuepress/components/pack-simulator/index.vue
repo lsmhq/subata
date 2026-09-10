@@ -847,7 +847,7 @@ export default {
   width: 76px;
   height: 76px;
   object-fit: contain;
-  margin: auto 0 6px;
+  margin: auto 0 85px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 .content-type {
