@@ -1,5 +1,6 @@
 <template>
-  <n-config-provider :theme="dark ? darkTheme : null">
+  <div class="calc-wrap">
+    <n-config-provider v-if="calcReady" :theme="dark ? darkTheme : null">
     <div class="canculate">
       <div class="tofixed-group">
         <span>小数</span>
@@ -86,6 +87,7 @@
       </div>
     </div>
   </n-config-provider>
+  </div>
 </template>
 
 <script>
@@ -141,6 +143,7 @@ export default {
       attr,
       gems,
       toFixed: 3,
+      calcReady: false,
       gemOptions: [
         { label: "无", value: 0 },
         { label: "+25", value: 25 },
@@ -221,6 +224,7 @@ export default {
     },
   },
   mounted() {
+    this.calcReady = true;
     this.syncDark();
     this.observer = new MutationObserver(() => this.syncDark());
     this.observer.observe(document.documentElement, {

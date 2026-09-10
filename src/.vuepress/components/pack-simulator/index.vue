@@ -20,7 +20,7 @@
         <button class="btn primary" :disabled="flipping" @click="nextBulk">
           下一包
         </button>
-        <span class="bulk-tip">十连开包中：已开 {{ bulkTotal - bulkLeft }} / {{ bulkTotal }}，剩 {{ bulkLeft }} 包</span>
+        <span class="bulk-tip">十连开包中：已开 {{ bulkTotal - bulkLeft }} / {{ bulkTotal }}，自动连开中</span>
       </template>
       <template v-else>
         <button class="btn primary" :disabled="flipping || crowns < pack.crowns" @click="openPack">
@@ -60,6 +60,19 @@
           </div>
         </div>
         <div class="results-note">官方卡包每包给出 7 件随机物品；掉率为社区按长期开包整理的估算，不代表官方数值。</div>
+      </div>
+
+      <div class="inv">
+        <div class="inv-title">我的背包</div>
+        <div v-if="invItems.length" class="inv-list">
+          <div v-for="item in invItems" :key="item.name" class="inv-item">
+            <img v-if="invIcon(item.name)" class="inv-icon" :src="invIcon(item.name)" alt="" />
+            <span class="inv-name">{{ item.name }}</span>
+            <span class="inv-type">{{ item.type ? typeLabel(item.type) : "" }}</span>
+            <span class="inv-count">x{{ item.count }}</span>
+          </div>
+        </div>
+        <div v-else class="inv-empty">还没有抽到任何物品，先开一包试试。</div>
       </div>
 
       <div class="odds">
@@ -156,6 +169,33 @@ export default {
     gradeLabel() {
       return this.pack.grade;
     },
+    itemMeta() {
+      const map = {};
+      for (const p of this.packs) {
+        for (const it of p.items) {
+          if (!map[it.name]) {
+            map[it.name] = { type: it.type, icon: it.image || "", rarity: it.rarity };
+          }
+        }
+      }
+      return map;
+    },
+    invItems() {
+      const byName = {};
+      for (const k of Object.keys(this.bag)) {
+        const name = k.split("::")[1] || k;
+        byName[name] = (byName[name] || 0) + this.bag[k];
+      }
+      const meta = this.itemMeta;
+      return Object.entries(byName)
+        .sort((a, b) => b[1] - a[1])
+        .map(([name, count]) => ({
+          name,
+          count,
+          type: meta[name] ? meta[name].type : "",
+          icon: meta[name] ? meta[name].icon : "",
+        }));
+    },
   },
   watch: {
     packKey() {
@@ -192,6 +232,10 @@ export default {
     packAsset(file) {
       if (!file) return "";
       return "/subata/assets/pack/" + file;
+    },
+    invIcon(name) {
+      const meta = this.itemMeta[name];
+      return meta && meta.icon ? this.packAsset(meta.icon) : "";
     },
     pickOne(arr) {
       return arr[Math.floor(Math.random() * arr.length)];
@@ -310,7 +354,15 @@ export default {
             this.revealed = r;
             if (i === last) {
               this.flipping = false;
-              if (this.bulkLeft === 0) this.bulkTotal = 0;
+              if (this.bulkLeft === 0) {
+                this.bulkTotal = 0;
+              } else if (this.bulkTotal) {
+                setTimeout(() => {
+                  if (this.bulkTotal && this.bulkLeft > 0 && !this.flipping) {
+                    this.nextBulk();
+                  }
+                }, 700);
+              }
             }
           }, t + 240);
         });
@@ -704,6 +756,51 @@ export default {
 .results-note {
   margin-top: 8px;
   font-size: 12px;
+  color: #999;
+}
+.inv {
+  margin-bottom: 14px;
+}
+.inv-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.inv-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.inv-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 13px;
+  background: var(--vp-c-bg);
+}
+.inv-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex: none;
+}
+.inv-name {
+  font-weight: 600;
+}
+.inv-type {
+  font-size: 12px;
+  color: #888;
+}
+.inv-count {
+  font-weight: 700;
+  color: #d03050;
+}
+.inv-empty {
+  font-size: 13px;
   color: #999;
 }
 .bag h4 {
