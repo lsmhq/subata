@@ -56,6 +56,7 @@
                     :src="iconOf(item.name, item.type)"
                     :alt="item.name"
                   />
+                  <span v-if="iconOf(item.name, item.type)" class="content-type">{{ typeLabel(item.type) }}</span>
                 </template>
               </div>
             </div>
@@ -736,6 +737,9 @@ export default {
     height: 56px;
     margin: auto 0;
   }
+  .content-type {
+    display: none;
+  }
   .content-name {
     top: 6px;
     left: 4px;
@@ -843,8 +847,16 @@ export default {
   width: 76px;
   height: 76px;
   object-fit: contain;
-  margin: auto 0;
+  margin: auto 0 6px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+.content-type {
+  flex: none;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffe9b3;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
 }
 .content-name {
   position: absolute;
