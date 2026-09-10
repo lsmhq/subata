@@ -194,14 +194,26 @@ export default {
         byName[name] = (byName[name] || 0) + this.bag[k];
       }
       const meta = this.itemMeta;
+      const has = (arr, name) => arr.some(([n]) => n === name);
       return Object.entries(byName)
         .sort((a, b) => b[1] - a[1])
-        .map(([name, count]) => ({
-          name,
-          count,
-          type: meta[name] ? meta[name].type : "",
-          icon: meta[name] ? meta[name].icon : "",
-        }));
+        .map(([name, count]) => {
+          let type = meta[name] ? meta[name].type : "";
+          if (!type) {
+            if (has(this.facts.snacks, name)) type = "snack";
+            else if (has(this.facts.reagents, name)) type = "reagent";
+            else if (has(this.facts.spellments, name)) type = "spellment";
+            else if (source.basics.cards.includes(name)) type = "card";
+            else if (source.basics.elixirs.includes(name)) type = "elixir";
+            else if (source.basics.housing.includes(name)) type = "housing";
+          }
+          return {
+            name,
+            count,
+            type,
+            icon: meta[name] ? meta[name].icon : "",
+          };
+        });
     },
   },
   watch: {
@@ -388,7 +400,7 @@ export default {
       const { results, specials } = this.rollOnce();
 
       const bag = { ...this.bag };
-      specials.forEach((it) => {
+      results.forEach((it) => {
         const k = this.pack.key + "::" + it.name;
         bag[k] = (bag[k] || 0) + 1;
       });
