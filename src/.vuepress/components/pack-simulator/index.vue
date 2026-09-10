@@ -49,13 +49,13 @@
               </div>
               <div class="face face-content" :style="contentBg(item)">
                 <template v-if="revealed[index]">
+                  <div class="content-name">{{ item.name }}</div>
                   <img
                     v-if="iconOf(item.name, item.type)"
                     class="content-icon"
                     :src="iconOf(item.name, item.type)"
                     :alt="item.name"
                   />
-                  <div class="content-name">{{ item.name }}</div>
                   <div class="content-tags">
                     <span class="preview-type">{{ typeLabel(item.type) }}</span>
                     <span class="content-rare">{{ rarityLabel(item.rarity) }}</span>
@@ -705,8 +705,40 @@ export default {
 }
 .card {
   width: 150px;
-  height: 200px;
+  height: 230px;
   perspective: 900px;
+}
+@media (max-width: 719px) {
+  .cards {
+    gap: 10px;
+  }
+  .card {
+    width: 104px;
+    height: 156px;
+  }
+  .cover-mark {
+    width: 44px;
+    height: 44px;
+  }
+  .face {
+    padding: 6px;
+  }
+  .content-icon {
+    width: 56px;
+    height: 56px;
+    margin: 8px 0 5px;
+  }
+  .content-name {
+    min-height: 39px;
+    max-height: 39px;
+    font-size: 11px;
+  }
+  .face-content .preview-type {
+    font-size: 10px;
+  }
+  .content-rare {
+    font-size: 11px;
+  }
 }
 .card-inner {
   position: relative;
@@ -798,24 +830,26 @@ export default {
 }
 .content-icon {
   flex: none;
-  width: 72px;
-  height: 72px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
-  margin-bottom: 8px;
+  margin: 12px 0 8px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 .content-name {
   flex: none;
   width: 100%;
-  min-height: 38px;
-  max-height: 38px;
+  min-height: 45px;
+  max-height: 45px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 4px;
+  border-radius: 8px;
+  background: rgba(8, 10, 16, 0.38);
+  padding: 4px 6px;
   font-size: 13px;
   font-weight: 700;
   line-height: 1.4;
