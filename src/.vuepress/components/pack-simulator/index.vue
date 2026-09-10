@@ -1024,6 +1024,14 @@ export default {
     width: calc(33.333% - 6px);
     height: 128px;
   }
+  .content-icon {
+    width: 56px;
+    height: 56px;
+    margin: auto 0;
+  }
+  .content-type {
+    display: none;
+  }
   .odds {
     padding: 8px 10px;
   }
