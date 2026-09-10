@@ -9,6 +9,10 @@
         <span class="label">开包次数</span>
         <span class="value">{{ total }}</span>
       </div>
+      <div class="crowns">
+        <span class="label">累计消耗</span>
+        <span class="value">{{ spent.toLocaleString() }}</span>
+      </div>
       <button class="link-btn" @click="reset">重置</button>
     </div>
 
@@ -149,6 +153,7 @@ export default {
       packs: source.packs,
       packKey: (saved && saved.packKey) || source.packs[0].key,
       crowns: saved && typeof saved.crowns === "number" ? saved.crowns : 999999,
+      spent: saved && typeof saved.spent === "number" ? saved.spent : 0,
       total: saved && typeof saved.total === "number" ? saved.total : 0,
       bag: saved && saved.bag ? saved.bag : {},
       bulkTotal: saved && typeof saved.bulkTotal === "number" ? saved.bulkTotal : 0,
@@ -377,6 +382,10 @@ export default {
     },
     openPack() {
       if (this.bulkTotal || this.flipping) return;
+      const cost = this.pack.crowns;
+      if (this.crowns < cost) return;
+      this.crowns -= cost;
+      this.spent += cost;
       this.applyRoll();
     },
     open10() {
@@ -384,6 +393,7 @@ export default {
       const cost = this.pack.crowns * 10;
       if (this.crowns < cost) return;
       this.crowns -= cost;
+      this.spent += cost;
       this.bulkTotal = 10;
       this.bulkLeft = 10;
       this.nextBulk();
@@ -445,6 +455,7 @@ export default {
     },
     reset() {
       this.crowns = 999999;
+      this.spent = 0;
       this.total = 0;
       this.bag = {};
       this.bulkTotal = 0;
@@ -462,6 +473,7 @@ export default {
           KEY,
           JSON.stringify({
             crowns: this.crowns,
+            spent: this.spent,
             total: this.total,
             bag: this.bag,
             bulkTotal: this.bulkTotal,
