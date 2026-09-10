@@ -56,10 +56,6 @@
                     :src="iconOf(item.name, item.type)"
                     :alt="item.name"
                   />
-                  <div class="content-tags">
-                    <span class="preview-type">{{ typeLabel(item.type) }}</span>
-                    <span class="content-rare">{{ rarityLabel(item.rarity) }}</span>
-                  </div>
                 </template>
               </div>
             </div>
@@ -726,11 +722,13 @@ export default {
   .content-icon {
     width: 56px;
     height: 56px;
-    margin: 8px 0 5px;
+    margin: auto 0;
   }
   .content-name {
-    min-height: 39px;
-    max-height: 39px;
+    top: 6px;
+    left: 4px;
+    right: 4px;
+    max-height: 33px;
     font-size: 11px;
   }
   .face-content .preview-type {
@@ -833,37 +831,28 @@ export default {
   width: 76px;
   height: 76px;
   object-fit: contain;
-  margin: 12px 0 8px;
+  margin: auto 0;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 .content-name {
-  flex: none;
-  width: 100%;
-  min-height: 45px;
-  max-height: 45px;
-  overflow: hidden;
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  right: 6px;
+  z-index: 1;
+  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  box-sizing: border-box;
-  border-radius: 8px;
-  background: rgba(8, 10, 16, 0.38);
-  padding: 4px 6px;
+  max-height: 45px;
+  overflow: hidden;
   font-size: 13px;
   font-weight: 700;
   line-height: 1.4;
   word-break: break-word;
   color: #fff;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-}
-.content-tags {
-  flex: none;
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
 }
 .face-content .preview-type {
   color: #e8ecf5;
