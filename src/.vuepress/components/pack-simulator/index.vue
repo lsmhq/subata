@@ -32,7 +32,7 @@
       </template>
     </div>
 
-      <div v-if="results.length" class="results">
+      <div v-if="results.length" class="results" :style="resultsBg()">
         <div class="results-title">
           {{ bulkTotal ? "本次开包内容 · 第 " + (bulkTotal - bulkLeft) + "/" + bulkTotal + " 包" : "本次开包内容" }}
         </div>
@@ -44,11 +44,17 @@
             :class="{ flipped: flipped[index], 'r-common': item.rarity === 'common', 'r-uncommon': item.rarity === 'uncommon', 'r-rare': item.rarity === 'rare', 'r-ultra-rare': item.rarity === 'ultra-rare', 'r-epic': item.rarity === 'epic' }"
           >
             <div class="card-inner">
-              <div class="face face-cover">
+              <div class="face face-cover" :style="coverOf(item.rarity)">
                 <span class="cover-mark">?</span>
               </div>
-              <div class="face face-content">
+              <div class="face face-content" :style="contentBg(item)">
                 <template v-if="revealed[index]">
+                  <img
+                    v-if="iconOf(item.name, item.type)"
+                    class="content-icon"
+                    :src="iconOf(item.name, item.type)"
+                    :alt="item.name"
+                  />
                   <div class="content-name">{{ item.name }}</div>
                   <div class="content-tags">
                     <span class="preview-type">{{ typeLabel(item.type) }}</span>
@@ -59,14 +65,14 @@
             </div>
           </div>
         </div>
-        <div class="results-note">官方卡包每包给出 7 件随机物品；掉率为社区按长期开包整理的估算，不代表官方数值。</div>
+        <div class="results-note">官方卡包每包给出 {{ perPack }} 件随机物品；掉率为社区按长期开包整理的估算，不代表官方数值。</div>
       </div>
 
       <div class="inv">
         <div class="inv-title">我的背包</div>
         <div v-if="invItems.length" class="inv-list">
           <div v-for="item in invItems" :key="item.name" class="inv-item">
-            <img v-if="invIcon(item.name)" class="inv-icon" :src="invIcon(item.name)" alt="" />
+            <img v-if="invIcon(item.name, item.type)" class="inv-icon" :src="invIcon(item.name, item.type)" alt="" />
             <span class="inv-name">{{ item.name }}</span>
             <span class="inv-type">{{ item.type ? typeLabel(item.type) : "" }}</span>
             <span class="inv-count">x{{ item.count }}</span>
@@ -102,7 +108,7 @@
             class="preview-item"
             :class="'r-' + item.rarity"
           >
-            <img v-if="item.image" class="item-img" :src="packAsset(item.image)" alt="" />
+            <img v-if="iconOf(item.name, item.type)" class="item-img" :src="iconOf(item.name, item.type)" alt="" />
             <span class="preview-name">{{ item.name }}</span>
             <span class="preview-rare">{{ rarityLabel(item.rarity) }}</span>
           </div>
@@ -127,6 +133,7 @@
 
 <script>
 import source from "./packs.json";
+import cards from "./cards.json";
 
 const KEY = "subata_pack_sim";
 
@@ -154,11 +161,15 @@ export default {
       revealed: [],
       flipping: false,
       dark: false,
+      facts: cards,
     };
   },
   computed: {
     pack() {
       return this.packs.find((p) => p.key === this.packKey) || this.packs[0];
+    },
+    perPack() {
+      return source.perPack || 10;
     },
     gradeType() {
       const g = this.pack.grade;
@@ -220,7 +231,8 @@ export default {
         furniture: "家具",
         elixir: "药水",
         snack: "零食",
-        card: "法术卡",
+        reagent: "打造材料",
+        card: "宝藏卡",
         housing: "家具",
       };
       return map[t] || t;
@@ -233,9 +245,60 @@ export default {
       if (!file) return "";
       return "/subata/assets/pack/" + file;
     },
-    invIcon(name) {
-      const meta = this.itemMeta[name];
-      return meta && meta.icon ? this.packAsset(meta.icon) : "";
+    packImg() {
+      return "";
+    },
+    coverOf() {
+      const url = this.facts.covers.back;
+      return {
+        background:
+          "linear-gradient(rgba(10, 14, 26, 0.35), rgba(10, 14, 26, 0.55)), url('" + url + "') center / cover no-repeat",
+      };
+    },
+    contentBg(item) {
+      const url = this.frameOf(item.type, item.name);
+      return {
+        background:
+          "linear-gradient(180deg, rgba(12, 16, 28, 0.4) 0%, rgba(12, 16, 28, 0.16) 30%, rgba(12, 16, 28, 0.24) 62%, rgba(12, 16, 28, 0.58) 85%, rgba(9, 11, 17, 0.9) 100%), url('" +
+          url +
+          "') top center / 100% auto no-repeat, #8a6a3a",
+      };
+    },
+    resultsBg() {
+      return {};
+    },
+    iconOf(name, type) {
+      const find = (arr) => {
+        const hit = arr.find(([n]) => n === name);
+        return hit ? hit[1] : "";
+      };
+      if (type === "snack") return find(this.facts.snacks);
+      if (type === "reagent") return find(this.facts.reagents);
+      if (type === "spellment") return find(this.facts.spellments);
+      return "";
+    },
+    frameOf(type, name) {
+      const F = this.facts.frames;
+      switch (type) {
+        case "card":
+          return F.treasure;
+        case "spellment":
+        case "equip":
+        case "elixir":
+        case "reagent":
+          return F.item;
+        case "mount":
+        case "pet":
+        case "appearance":
+        case "furniture":
+        case "housing":
+        case "snack":
+        default:
+          return F.frame;
+      }
+    },
+    invIcon(name, type) {
+      return this.iconOf(name, type);
     },
     pickOne(arr) {
       return arr[Math.floor(Math.random() * arr.length)];
@@ -279,16 +342,19 @@ export default {
 
       const basicPool = [
         ...source.basics.elixirs.map((n) => ({ name: n, type: "elixir" })),
-        ...source.basics.snacks.map((n) => ({ name: n, type: "snack" })),
         ...source.basics.cards.map((n) => ({ name: n, type: "card" })),
         ...source.basics.housing.map((n) => ({ name: n, type: "housing" })),
+        ...this.facts.snacks.map(([n]) => ({ name: n, type: "snack" })),
+        ...this.facts.reagents.map(([n]) => ({ name: n, type: "reagent" })),
+        ...this.facts.spellments.map(([n]) => ({ name: n, type: "spellment" })),
       ];
       const others = this.pack.items.filter(
         (it) => !["mount_perm", "mount_temp", "pet", "topgear"].includes(this.categoryOf(it))
       );
 
       const misc = [];
-      while (misc.length < 7 - specials.length) {
+      const target = this.perPack;
+      while (misc.length < target - specials.length) {
         if (others.length && Math.random() < 0.2) {
           const it = this.weightedOther(others);
           misc.push(this.newResult(it.name, it.type, it.rarity, false));
@@ -601,6 +667,8 @@ export default {
 }
 .results {
   margin-bottom: 16px;
+  border-radius: 12px;
+  padding: 12px 14px;
 }
 .odds {
   border: 1px dashed #e2e5eb;
@@ -632,11 +700,12 @@ export default {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 14px;
 }
 .card {
-  width: 116px;
-  height: 150px;
+  width: 150px;
+  height: 200px;
   perspective: 900px;
 }
 .card-inner {
@@ -664,14 +733,7 @@ export default {
   overflow: hidden;
 }
 .face-cover {
-  background: repeating-linear-gradient(
-    45deg,
-    #5b6b8c,
-    #5b6b8c 10px,
-    #4a5a7a 10px,
-    #4a5a7a 20px
-  );
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 34px;
   font-weight: 700;
   border: 2px solid #39455f;
@@ -708,23 +770,21 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.18);
 }
 .face-content {
   transform: rotateY(180deg);
-  background: #fff;
   border: 2px solid #e2e5eb;
-  color: #333;
-  justify-content: flex-start;
+  color: #fff;
+  justify-content: center;
   padding: 10px;
 }
 .r-epic .face-content {
   border-color: #f0a020;
   box-shadow: 0 0 18px rgba(240, 160, 32, 0.55);
-  background: linear-gradient(160deg, #fffdf6, #fff3d6);
 }
 .r-ultra-rare .face-content {
   border-color: #9c27b0;
@@ -736,18 +796,49 @@ export default {
 .r-uncommon .face-content {
   border-color: #4caf50;
 }
+.content-icon {
+  flex: none;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
 .content-name {
-  font-size: 12px;
+  flex: none;
+  width: 100%;
+  min-height: 38px;
+  max-height: 38px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 4px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.4;
   word-break: break-word;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 .content-tags {
+  flex: none;
   margin-top: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
+}
+.face-content .preview-type {
+  color: #e8ecf5;
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 11px;
+  white-space: nowrap;
 }
 .content-rare {
   font-size: 12px;

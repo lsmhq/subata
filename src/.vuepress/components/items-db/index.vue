@@ -91,6 +91,7 @@
           :class="{ open: open === item }"
         >
           <div class="item-head" @click="toggle(item)">
+            <img v-if="item.image" class="item-img" :src="item.image" :alt="item.name" loading="lazy" />
             <span v-if="item.test" class="test-badge" title="开发测试物品">TEST</span>
             <span class="item-name">{{ item.name }}</span>
             <span v-if="item.school" class="school-tag" :class="'s-' + item.school">{{ schoolCN[item.school] }}</span>
@@ -142,6 +143,8 @@ const TYPE_CN = {
   Athame: "匕首",
   Amulet: "护符",
   Mount: "坐骑",
+  Snack: "零食",
+  Reagent: "试剂",
 };
 
 const SCHOOL_CN = {
@@ -169,7 +172,11 @@ const FLAG_CN = {
   "No Dye": "不可染色",
 };
 
-const DATA_URL = "/subata/assets/items-db/items.json";
+const DATA_URLS = [
+  "/subata/assets/items-db/items.json",
+  "/subata/assets/items-db/snack-items.json",
+  "/subata/assets/items-db/reagent-items.json",
+];
 
 const ICON_MAP = [
   { re: /\bPip\b|Power Pips/, key: "Type_PowerPips" },
@@ -294,10 +301,12 @@ export default {
     async load() {
       this.loading = true;
       try {
-        const res = await fetch(DATA_URL);
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const data = await res.json();
-        this.items = data.items || [];
+        const res = await Promise.all(DATA_URLS.map((u) => fetch(u)));
+        for (const r of res) {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+        }
+        const datas = await Promise.all(res.map((r) => r.json()));
+        this.items = datas.flatMap((d) => d.items || []).map((i) => ({ cards: [], lines: [], flags: [], school: null, ...i }));
         if (!this.items.length) throw new Error("data empty");
         const lv = this.items.map((i) => (i.level == null ? 0 : i.level));
         const min = Math.min(...lv);
@@ -518,6 +527,14 @@ export default {
 .item-name {
   font-weight: 600;
   font-size: 14px;
+}
+.item-img {
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border-radius: 6px;
+  object-fit: contain;
+  background: rgba(128, 128, 128, 0.08);
 }
 .test-badge {
   background: #d03050;
