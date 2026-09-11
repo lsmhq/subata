@@ -93,7 +93,7 @@ function decodeBlock(buf, off, format, out, w, h, bx, by) {
   const { pal, transparent } = rgbPalette(buf, rgbOff, format)
   const idx = buf.readUInt32LE(rgbOff + 4)
   const px = []
-  for (let i = 0; i < 4; i++) px.push([(idx >> (i * 2)) & 3, (idx >> (8 + i * 2)) & 3, (idx >> (16 + i * 2)) & 3, (idx >> (24 + i * 2)) & 3])
+  for (let i = 0; i < 16; i++) px.push((idx >> (i * 2)) & 3)
   for (let row = 0; row < 4; row++) {
     const yy = by + row
     if (yy >= h) continue
@@ -101,7 +101,7 @@ function decodeBlock(buf, off, format, out, w, h, bx, by) {
       const xx = bx + col
       if (xx >= w) continue
       const pix = row * 4 + col
-      const ci = px[row][col]
+      const ci = px[pix]
       let a = 255
       if (transparent && ci === 3) a = 0
       else if (alpha) a = Math.round(alpha[pix])
