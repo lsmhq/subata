@@ -1,6 +1,7 @@
 import { defineClientConfig } from "@vuepress/client";
 
 import Button from "./components/Button/index.vue";
+import AzothCalc from "./components/azoth-calc/index.vue";
 import Canculate from "./components/canculate/index.vue";
 import Card from "./components/Card/index.vue";
 import Icon from "./components/Icon/index.vue";
@@ -13,6 +14,7 @@ import Update from "./components/update/index.vue";
 export default defineClientConfig({
   enhance({ app }) {
     app.component("Button", Button);
+    app.component("AzothCalc", AzothCalc);
     app.component("Canculate", Canculate);
     app.component("Card", Card);
     app.component("Icon", Icon);

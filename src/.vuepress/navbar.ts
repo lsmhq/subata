@@ -100,6 +100,11 @@ export default navbar([
                 text: '物品图鉴',
                 link: '/subata-tools/index6',
                 icon: 'book-open'
+            },
+            {
+                text: 'Azoth 计算器',
+                link: '/subata-tools/index7',
+                icon: 'calculator'
             }
         ]
     },
