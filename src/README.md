@@ -112,7 +112,6 @@ highlights:
         link: /subatamd/download.html
 
       - title: 网站工具箱
-        link: /subata-tools/
 
 
 copyright: Subata
