@@ -10,7 +10,7 @@ bgImageDark: /6-dark.svg
 bgImageStyle:
   background-attachment: fixed
 
-heroText: Subata
+heroText: Subata 3.0
 tagline: Wizard101 攻略 · 汉化 · 工具 · 社区
 
 actions:
@@ -109,10 +109,10 @@ highlights:
 
     highlights:
       - title: 启动器下载
-      - title: 自动皇冠答题
-      - title: 账号状态查询
-      - title: 个性化界面
-      - title: 持续迭代更新
+        link: /subatamd/download.html
+
+      - title: 网站工具箱
+        link: /subata-tools
 
 
 copyright: Subata
