@@ -28,7 +28,7 @@ timeline: true
 
 @tab:active windows
 <Button secTitle="v3.0.18" href="https://github.com/lsmhq/wizard101_start_flutter/releases/download/v3.0.18/subata-Setup-3.0.18.exe">Subata 3.0</Button>
-<Button secTitle="v2.x.x" href="https://github.com/lsmhq/wizard101_start_flutter/releases/download/v3.0.18/subata-Setup-3.0.18.exe">Subata 2.0</Button>
+<Button secTitle="v2.x.x" href="http://101.43.174.221:3001/file/subatax64/Subata%20Setup%202.4.2.exe">Subata 2.0</Button>
 @tab Mac
 <Button disable="{{true}}">暂不支持</Button>
 :::
